@@ -23,4 +23,4 @@ function about() {
 
 var windowlocation = window.location.pathname.replace('/', '').replace('.html', '').replace('404', '');
 
-document.getElementById("replace").innerHTML = windowlocation + ' Not Found'
+document.getElementById("replace").innerHTML = '\'' + windowlocation + '\'' + ' Not Found'
