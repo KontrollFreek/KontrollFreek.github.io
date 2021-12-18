@@ -120,22 +120,20 @@ a:active {
 }
 
 .container {
-  overflow-y:scroll;
+  overflow-y: scroll;
   display: none;
-  position: relative;
   position: absolute;
-  top: 45%;
+  top: 40%;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
   margin: auto;
   width: 70%;
-  height: 200px;
+  max-height: 250px;
   border: 4px dashed;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -174,7 +172,7 @@ a:active {
   position: absolute;
   text-align: center;
 
-  background-color: #08080880;
+  background-color: #080808aa;
   color: #ffaa00;
 
   z-index: 100;
@@ -185,7 +183,7 @@ a:active {
   padding-left: 7px;
   padding-right: 7px;
   border-radius: 3px;
-  margin-top: -80px;
+  margin-top: 5px;
 
   font-size: 19px;
   text-indent: 0px;
@@ -196,7 +194,7 @@ a:active {
 
 @keyframes animmention {
   from {
-    transform: translatey(10px);
+    transform: translatey(-10px);
     opacity: 0;
   }
 

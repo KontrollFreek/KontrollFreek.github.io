@@ -12,11 +12,11 @@ function home() {
 
 function about() {
   document.getElementById("box").innerHTML =
-    'Hey! I\'m <span class="mention">@KontrollFreek<span><b>KontrollFreek</b><tag>#0643</tag></span></span> <br>\
-    like to do digital and traditional art and code in my spare time <br>\
+    'Hi there! I\'m <span class="mention">@KontrollFreek<span><b>KontrollFreek</b><tag>#0643</tag></span></span> <br>\
+    I really like to draw (digital and traditional art), and I also like to code some (as you can see by this website <b>:)</b> ) <br>\
     If you want to see some of my coding projects, check out my <a href="https://github.com/KontrollFreek" target="_blank">Github</a>, or the links below. <br>\
     <br>\
-    In case you don\'t know, I\'m an amateur coder, so none of my projects are very good, but I am in fact very good at art (at least by my standards). <br>\
+    In case you couldn\'t see by now, I\'m an amateur coder, so none of my projects are very good, but I am in fact very good at art (at least by my standards). <br>\
     If you want to see some of my art, check out my <a href="https://twitter.com/KontrollF" target="_blank">Twitter</a>.';
   document.getElementById("box").style.display = "block";
 }
