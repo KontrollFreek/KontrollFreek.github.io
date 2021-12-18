@@ -204,6 +204,20 @@ a:active {
   }
 }
 
+.noscript {
+  z-index: 102;
+  background-color: #000;
+  margin-top: 30%;
+  padding: 5%;
+
+  -drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
 .pfp {
   border-radius: 50%;
   width: 55px;
@@ -219,6 +233,13 @@ a:active {
   text-align: center;
   font-size: 19px;
   font-weight: 400;
+
+  -drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 .one {
