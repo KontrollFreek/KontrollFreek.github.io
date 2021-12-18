@@ -17,6 +17,11 @@ tag {
   color: #ffaa00aa;
 }
 
+::selection {
+  background: #ffaa00;
+  color: #111111;
+}
+
 a:link {
   color: #ffd000;
   background-color: transparent;
@@ -41,6 +46,17 @@ a:active {
   text-decoration: underline;
 }
 
+.ad {
+  margin: auto;
+  max-width: 50%;
+  text-align: center;
+  background-color: #ffaa0033;
+  border: 3px solid #ffaa00;
+  padding: 5px;
+  border-radius: 10px;
+  content: 'These advertisements are how I make money for all these websites. Please consider turning off your adblock.';
+}
+
 .txtbtn {
   color: #ffd000;
   background-color: transparent;
@@ -58,11 +74,6 @@ a:active {
   color: #ffd000;
   background-color: transparent;
   text-decoration: underline;
-}
-
-::selection {
-  background: #ffaa00;
-  color: #111111;
 }
 
 .topnav {
