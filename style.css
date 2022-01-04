@@ -242,22 +242,6 @@ a:active {
   -ms-user-select: none;
 }
 
-.one {
-  text-align: center;
-  margin-top: 100px;
-}
-
-.two {
-  font-size: 150px;
-  font-weight: 700;
-}
-
-.three {
-  margin-bottom: 10px;
-  font-size: 50px;
-  font-weight: 500;
-}
-
 ::-webkit-scrollbar {
   display: none;
 }
