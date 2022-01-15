@@ -146,6 +146,24 @@ a:active {
   top: 50%;
 }
 
+.topnavonpage {
+  text-align: center;
+  color: #fff;
+  font-size: 70px;
+  font-weight: 800;
+  margin: 10px;
+
+  background-color: #3089ff;
+  border: 3px solid #3089ff;
+  color: #fff;
+  padding: 6px 15px;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 3px;
+
+  top: 50%;
+}
+
 .topnavbtn:hover {
   background-color: #3089ff;
 }
