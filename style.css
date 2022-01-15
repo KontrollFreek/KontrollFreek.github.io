@@ -9,14 +9,6 @@ body {
   margin: 0px;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-tag {
-  color: #ffaa00aa;
-}
-
 ::selection {
   background: #ffaa00;
   color: #111111;
@@ -240,6 +232,22 @@ a:active {
   -webkit-user-drag: none;
   -webkit-user-select: none;
   -ms-user-select: none;
+}
+
+.one {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.two {
+  font-size: 150px;
+  font-weight: 700;
+}
+
+.three {
+  margin-bottom: 10px;
+  font-size: 50px;
+  font-weight: 500;
 }
 
 ::-webkit-scrollbar {

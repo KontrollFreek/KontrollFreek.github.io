@@ -20,3 +20,7 @@ function about() {
     If you want to see some of my art, check out my <a href="https://twitter.com/KontrollF" target="_blank">Twitter</a>.';
   document.getElementById("box").style.display = "block";
 }
+
+var windowlocation = window.location.pathname.replace('/', '').replace('.html', '').replace('404', '');
+
+document.getElementById("replace").innerHTML = '\'' + windowlocation + '\'' + ' Not Found'
