@@ -8,16 +8,37 @@
 body {
     color: #fff;
     margin: 0;
-    background-color: #aaaaaa;
+    background-color: #777777;
 }
 
-.site {
-    max-width: 70%;
-    margin-left: 23%;
-    margin-right: 7%;
+p {
+    margin: 0;
 }
 
-.topnav {
+he {
+    display: block;
+    font-size: 300%;
+}
+
+me {
+    display: block;
+    font-size: 75%;
+}
+
+sm {
+    display: block;
+    font-size: 50%;
+}
+
+.txt {
+    text-align: center;
+    width: 70%;
+    max-width: 1200px;
+    min-width: 525px;
+    margin-left: 25%;
+}
+
+.nav {
     overflow: hidden;
     background-color: #333333;
     width: 20%;
@@ -25,14 +46,13 @@ body {
     max-width: 280px;
     color: #ffffff;
 
-    float: left;
-    position: sticky;
+    position: fixed;
     top: 0;
     bottom: 0;
-    height: 100%;
+    left: 0;
 }
   
-.topnavtxt {
+.navtxt {
     display: block;
     margin: 20px;
     font-weight: bold;
@@ -40,7 +60,7 @@ body {
     text-align: center;
 }
   
-.topnav a {
+.nav a {
     display: block;
     color: #f2f2f2;
     margin: 20px;
@@ -48,15 +68,15 @@ body {
     text-decoration: none;
 }
 
-.topnav a:hover {
+.nav a:hover {
     font-weight: bold;
-    background-color: #dddddd;
+    background-color: #eeeeee;
     color: #333333;
     transition: ease-in-out 0.5s;
 	transform: translateX(5px);
 }
 
-.topnavcredit {
+.navcredit {
     position: absolute;
     bottom: 0;
     display: block;
