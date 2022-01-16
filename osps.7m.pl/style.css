@@ -39,17 +39,20 @@ sm {
 }
 
 .nav {
-    overflow: hidden;
     background-color: #333333;
+    color: #ffffff;
+
     width: 20%;
     min-width: 160px;
     max-width: 280px;
-    color: #ffffff;
-
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
+
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
   
 .navtxt {
@@ -68,6 +71,10 @@ sm {
     text-decoration: none;
 }
 
+.nav a:nth-child(5) {
+    margin-bottom: 100px;
+}
+
 .nav a:hover {
     font-weight: bold;
     background-color: #eeeeee;
@@ -77,14 +84,62 @@ sm {
 }
 
 .navcredit {
-    position: absolute;
-    bottom: 0;
-    display: block;
+    background-color: #333333;
     color: #666666;
-    margin: 13px;
+    padding: 13px;
     text-decoration: none;
     min-width: 160px;
-    width: 17%
 
+    width: 20%;
+    min-width: 160px;
+    max-width: 280px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 70px;
+}
+
+.nav:after {
+    bottom: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    content: "";
+    background: linear-gradient(to top,
+       #333333 20%, 
+       #33333300 80%
+    );
+    pointer-events: none;
+
+    margin-bottom: 60px;
+
+    width: 20%;
+    min-width: 160px;
+    max-width: 280px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
 }
   
+#modal {
+    background-color: #444444;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    overflow: none;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+#modal div {
+    text-align: center;
+    background-color: #535353;
+    padding: 20px;
+    border: 1px solid #666666;
+    width: 70%;
+}
