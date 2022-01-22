@@ -111,6 +111,12 @@ const d = {
 					"percent": 100,
 					"hz": "240hz"
 				},
+				{
+					"user": "Linear",
+					"link": "https://youtu.be/DGrWN9VEt9Y?t=21",
+					"percent": 100,
+					"hz": "144hz"
+				},
 
 			],
 			"name": "Greasy Ass II",
@@ -381,6 +387,18 @@ const d = {
 					"percent": 100,
 					"hz": "60hz"
 				},
+				{
+					"user": "Linear",
+					"link": "https://youtu.be/DGrWN9VEt9Y?t=117",
+					"percent": 100,
+					"hz": "144hz"
+				},
+				{
+					"user": "Septaholic",
+					"link": "https://youtu.be/fH9yOuOGn4s",
+					"percent": 100,
+					"hz": "60hz"
+				},
 
 			],
 			"name": "Whoppa",
@@ -403,6 +421,12 @@ const d = {
 					"percent": 100,
 					"hz": "70hz"
 				},
+				{
+					"user": "Linear",
+					"link": "https://youtu.be/DGrWN9VEt9Y?t=105",
+					"percent": 100,
+					"hz": "144hz"
+				},
 
 			],
 			"name": "UFWM Challenge",
@@ -424,6 +448,12 @@ const d = {
 					"link": "https://www.youtube.com/watch?v=4hYvWBtN-bY",
 					"percent": 100,
 					"hz": "60hz"
+				},
+				{
+					"user": "Linear",
+					"link": "https://youtu.be/DGrWN9VEt9Y?t=90",
+					"percent": 100,
+					"hz": "144hz"
 				},
 
 			],
@@ -459,8 +489,20 @@ const d = {
 					"hz": "60hz"
 				},
 				{
-					"user": "Ethan The Bomb",
-					"link": "https://youtu.be/6QD0kgmsjEE",
+					"user": "hug",
+					"link": "https://youtu.be/ohtDDq8XMEg",
+					"percent": 100,
+					"hz": "60hz"
+				},
+				{
+					"user": "Linear",
+					"link": "https://youtu.be/DGrWN9VEt9Y?t=11",
+					"percent": 100,
+					"hz": "144hz"
+				},
+				{
+					"user": "Septaholic",
+					"link": "https://youtu.be/Ldbr4_64jKo",
 					"percent": 100,
 					"hz": "60hz"
 				},
@@ -504,6 +546,18 @@ const d = {
 					"percent": 100,
 					"hz": "300hz"
 				},
+				{
+					"user": "Linear",
+					"link": "https://youtu.be/DGrWN9VEt9Y?t=76",
+					"percent": 100,
+					"hz": "144hz"
+				},
+				{
+					"user": "Septaholic",
+					"link": "https://youtu.be/rMeX-XSuXQ",
+					"percent": 100,
+					"hz": "60hz"
+				},
 
 			],
 			"name": "Dry Out v2",
@@ -520,12 +574,13 @@ const d = {
 		/*=================================================================================*/
 		{
 			"vids": [
-				// {
-				// 	"user": "",
-				// 	"link": "",
-				// 	"percent": 0,
-				// 	"hz": ""
-				// },
+				{
+					"user": "Linear",
+					"link": "https://youtu.be/DGrWN9VEt9Y?t=44",
+					"percent": 100,
+					"hz": "144hz"
+				},
+				
 
 			],
 			"name": "Idolize",
@@ -542,12 +597,12 @@ const d = {
 		/*=================================================================================*/
 		{
 			"vids": [
-				// {
-				// 	"user": "",
-				// 	"link": "",
-				// 	"percent": 0,
-				// 	"hz": ""
-				// },
+				{
+					"user": "Linear",
+					"link": "https://youtu.be/DGrWN9VEt9Y?t=34",
+					"percent": 100,
+					"hz": "144hz"
+				},
 
 			],
 			"name": "New Mexcio",
@@ -595,6 +650,18 @@ const d = {
 				{
 					"user": "Entropy",
 					"link": "https://youtu.be/P3BQOIBW3C0",
+					"percent": 100,
+					"hz": "60hz"
+				},
+				{
+					"user": "Linear",
+					"link": "https://youtu.be/DGrWN9VEt9Y?t=0",
+					"percent": 100,
+					"hz": "144hz"
+				},
+				{
+					"user": "Septaholic",
+					"link": "https://youtu.be/MhaOSJ9QhTU",
 					"percent": 100,
 					"hz": "60hz"
 				},
