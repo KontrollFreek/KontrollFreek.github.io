@@ -714,18 +714,6 @@ const d = {
 				},
 				{
 					"vids": [
-						{
-							"user": "Amnesticat",
-							"link": "https://youtu.be/VydEqbqZIHM",
-							"percent": 100,
-							"hz": "60hz"
-						},
-						{
-							"user": "HanoCrux",
-							"link": "https://youtu.be/ouBnUMXyxVg",
-							"percent": 100,
-							"hz": "60hz"
-						},
 		
 					],
 					"name": "Saw Placement",
@@ -734,7 +722,7 @@ const d = {
 					"id": 72201867,
 					"pass": "None",
 					"percentToQualify": 50,
-					"verificationVid": "https://youtu.be/ichS2CWmzaE",
+					"verificationVid": "https://youtu.be/BgU50PTJpcI",
 					/*for legacy list add the word "legacy" behind the word key right away: "legacykey"*/
 					"key": 4
 		
