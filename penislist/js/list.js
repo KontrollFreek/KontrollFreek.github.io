@@ -32,6 +32,12 @@ const d = {
 					"percent": 100,
 					"hz": "240hz"
 				},
+				{
+					"user": "kirbycube",
+					"link": "https://youtu.be/DHEel8RRhLw",
+					"percent": 100,
+					"hz": "60hz"
+				},
 
 			],
 			"name": "Crack Blizzard",
