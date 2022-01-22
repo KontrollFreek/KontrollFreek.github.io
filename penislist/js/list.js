@@ -127,7 +127,7 @@ const d = {
 			"percentToQualify": 41,
 			"verificationVid": "https://www.youtube.com/watch?v=oR9jVuiENz0",
 			/*for legacy list add the word "legacy" behind the word key right away: "legacykey"*/
-			"key": 4
+			"key": 8
 
 		},
 		/*=================================================================================*/
@@ -301,7 +301,7 @@ const d = {
 			"percentToQualify": 49,
 			"verificationVid": "https://www.youtube.com/watch?v=Er0R5UGsT9k",
 			/*for legacy list add the word "legacy" behind the word key right away: "legacykey"*/
-			"key": 10
+			"key": 20
 
 		},
 		/*=================================================================================*/
@@ -678,6 +678,61 @@ const d = {
 			"key": 21
 
 		},
+				/*=================================================================================*/
+				{
+					"vids": [
+						{
+							"user": "Amnesticat",
+							"link": "https://youtu.be/VydEqbqZIHM",
+							"percent": 100,
+							"hz": "60hz"
+						},
+						{
+							"user": "HanoCrux",
+							"link": "https://youtu.be/ouBnUMXyxVg",
+							"percent": 100,
+							"hz": "60hz"
+						},
+		
+					],
+					"name": "Level Below is Homo",
+					"author": "Entropy [Linear]",
+					"more": "none",
+					"id": 77457519,
+					"pass": "None",
+					"percentToQualify": 50,
+					"verificationVid": "https://youtu.be/ichS2CWmzaE",
+					/*for legacy list add the word "legacy" behind the word key right away: "legacykey"*/
+					"key": 3
+		
+				},
+				{
+					"vids": [
+						{
+							"user": "Amnesticat",
+							"link": "https://youtu.be/VydEqbqZIHM",
+							"percent": 100,
+							"hz": "60hz"
+						},
+						{
+							"user": "HanoCrux",
+							"link": "https://youtu.be/ouBnUMXyxVg",
+							"percent": 100,
+							"hz": "60hz"
+						},
+		
+					],
+					"name": "Saw Placement",
+					"author": "Entropy [HanoCrux]",
+					"more": "none",
+					"id": 72201867,
+					"pass": "None",
+					"percentToQualify": 50,
+					"verificationVid": "https://youtu.be/ichS2CWmzaE",
+					/*for legacy list add the word "legacy" behind the word key right away: "legacykey"*/
+					"key": 4
+		
+				},
 		/*=================================================================================*/
 		/*only modify version with every MAJOR update (you can always check update number at https://github.com/electroflameofficial/gdshittylist/releases*/
 
@@ -685,7 +740,7 @@ const d = {
 	"version": [
 		1,
 		0,
-		0
+		2
 	]
 };
 
