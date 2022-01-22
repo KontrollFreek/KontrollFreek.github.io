@@ -49,7 +49,7 @@ const d = {
 		{
 			"vids": [
 				{
-					"user": "Hanocrux",
+					"user": "HanoCrux",
 					"link": "https://youtu.be/p2rxEIn2Xmg",
 					"percent": 100,
 					"hz": "60hz"
@@ -184,7 +184,7 @@ const d = {
 					"hz": "60hz"
 				},
 				{
-					"user": "Hanocrux",
+					"user": "HanoCrux",
 					"link": "https://youtu.be/w5xnF_9Ryfk",
 					"percent": 100,
 					"hz": "60hz"
@@ -233,6 +233,12 @@ const d = {
 					"percent": 100,
 					"hz": "60hz"
 				},
+				{
+					"user": "HanoCrux",
+					"link": "https://youtu.be/iOXlhBiySq4",
+					"percent": 100,
+					"hz": "60hz"
+				},
 
 			],
 			"name": "Erebus",
@@ -273,6 +279,12 @@ const d = {
 					"percent": 100,
 					"hz": "60hz"
 				},
+				{
+					"user": "HanoCrux",
+					"link": "https://www.youtube.com/watch?v=ExAJVkKm9xQ",
+					"percent": 100,
+					"hz": "60hz"
+				},
 
 			],
 			"name": "Y",
@@ -292,6 +304,12 @@ const d = {
 				{
 					"user": "Amnesticat",
 					"link": "https://www.youtube.com/watch?v=Xmr1yzIstJ8",
+					"percent": 100,
+					"hz": "60hz"
+				},
+				{
+					"user": "AdoraQT",
+					"link": "https://www.youtube.com/watch?v=AlHktBonzuU",
 					"percent": 100,
 					"hz": "60hz"
 				},
@@ -340,8 +358,26 @@ const d = {
 					"hz": "60hz"
 				},
 				{
-					"user": "Hanocrux",
+					"user": "HanoCrux",
 					"link": "https://youtu.be/hkuStOO1FF0",
+					"percent": 100,
+					"hz": "60hz"
+				},
+				{
+					"user": "Ethan The Bomb",
+					"link": "https://youtu.be/-4yfeDOHemA",
+					"percent": 67,
+					"hz": "60hz"
+				},
+				{
+					"user": "AdoraQT",
+					"link": "https://youtu.be/ztaxZMAS_FY",
+					"percent": 100,
+					"hz": "60hz"
+				},
+				{
+					"user": "hug",
+					"link": "https://youtu.be/ohtDDq8XMEg",
 					"percent": 100,
 					"hz": "60hz"
 				},
@@ -413,6 +449,18 @@ const d = {
 				{
 					"user": "KontrollFreek",
 					"link": "https://youtu.be/AJvHUCtcer8",
+					"percent": 100,
+					"hz": "60hz"
+				},
+				{
+					"user": "Ethan The Bomb",
+					"link": "https://youtu.be/fkRzFvLonG4",
+					"percent": 100,
+					"hz": "60hz"
+				},
+				{
+					"user": "Ethan The Bomb",
+					"link": "https://youtu.be/6QD0kgmsjEE",
 					"percent": 100,
 					"hz": "60hz"
 				},
@@ -538,12 +586,18 @@ const d = {
 		/*=================================================================================*/
 		{
 			"vids": [
-				// {
-				// 	"user": "",
-				// 	"link": "",
-				// 	"percent": 0,
-				// 	"hz": ""
-				// },
+				{
+					"user": "Ethan The Bomb",
+					"link": "https://youtu.be/YSSb3FcZEiY",
+					"percent": 100,
+					"hz": "60hz"
+				},
+				{
+					"user": "Entropy",
+					"link": "https://youtu.be/P3BQOIBW3C0",
+					"percent": 100,
+					"hz": "60hz"
+				},
 
 			],
 			"name": "shart",
