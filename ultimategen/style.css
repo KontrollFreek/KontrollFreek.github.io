@@ -1,0 +1,5 @@
+@font-face {font-family: Pusab; src: url('Pusab.ttf')}
+
+body {
+    font-family: Pusab !important;
+}
