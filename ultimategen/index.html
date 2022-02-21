@@ -1,20 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Ultimate Generator</title>
-    <script src="script.js"></script>
     <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
+
 <body>
+    <span class="img-box"><img id="img"></span>
 
-    <button onclick="rnd()" >randomize</button>
-
-    <img id="img" width="200" >
-
-    <p>images taken from <a href="https://github.com/GDColon/GDBrowser/tree/master/assets/difficulties" target="_blank">GDBrowser</a></p>
+    <p>Assets taken from <a href="https://github.com/GDColon/GDBrowser/tree/master/assets" target="_blank">GDBrowser</a></p>
     
+
+    <h>Difficulty</h>
+    <div class="opt">
+        <input type="radio" id="unrated" name="dif" value="Unrated">
+        <label for="unrated">Unrated</label>
+    </div>
+    <div class="opt">
+        <input type="radio" id="auto" name="dif" value="Auto">
+        <label for="auto">Auto</label>
+    </div>
+    <div class="opt">
+        <input type="radio" id="easy" name="dif">
+        <label for="easy">Easy</label>
+    </div>
+    <div class="opt">
+        <input type="radio" id="normal" name="dif">
+        <label for="normal">Normal</label>
+    </div>
+    <div class="opt">
+        <input type="radio" id="hard" name="dif">
+        <label for="hard">Hard</label>
+    </div>
+    <div class="opt">
+        <input type="radio" id="harder" name="dif">
+        <label for="harder">Harder</label>
+    </div>
+    <div class="opt">
+        <input type="radio" id="insane" name="dif">
+        <label for="insane">Insane</label>
+    </div>
+    <div class="opt">
+        <input type="radio" id="demon" name="dif">
+        <label for="demon">Demon</label>
+
+        <div class="opt">
+            <input type="radio" id="demon-easy" name="ddif">
+            <label id="demontype" for="demon-easy">Easy</label>
+        </div>
+        <div class="opt">
+            <input type="radio" id="demon-medium" name="ddif">
+            <label id="demontype" for="demon-medium">Medium</label>
+        </div>
+        <div class="opt">
+            <input type="radio" id="demon-hard" name="ddif">
+            <label id="demontype" for="demon-hard">Hard</label>
+        </div>
+        <div class="opt">
+            <input type="radio" id="demon-insane" name="ddif">
+            <label id="demontype" for="demon-insane">Insane</label>
+        </div>
+        <div class="opt">
+            <input type="radio" id="demon-extreme" name="ddif">
+            <label id="demontype" for="demon-extreme">Extreme</label>
+        </div>
+    </div>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="script.js"></script>
 </html>

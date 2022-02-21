@@ -1,5 +1,68 @@
 @font-face {font-family: Pusab; src: url('Pusab.ttf')}
 
+img {
+    height: 200px;
+}
+
 body {
+    margin: 0 10;
     font-family: Pusab !important;
+    color: white;
+    font-size: 60px;
+    line-height: 100%;
+    -webkit-text-stroke-width: 0.25vh;
+    -webkit-text-stroke-color: black;
+    text-shadow: 0.375vh 0.375vh 0vh rgba(0, 0, 0, 0.3);
+
+    min-height: 92.7vh;
+    background: rgb(128,128,128);
+    background: linear-gradient( rgba(128, 128, 128) 0%, rgba(100, 100, 100) 100%);
+}
+
+a {
+    text-decoration: none;
+}
+
+.opt {
+    font-size: 30px;
+    -webkit-text-stroke-width: 0.125vh;
+    text-shadow: 0.1875vh 0.1875vh 0vh rgba(0, 0, 0, 0.3);
+    margin: 10px 25px;
+}
+
+.box {    
+    border: 2.5vh solid transparent;
+    border-image-outset: 0;
+    border-image-repeat: stretch;
+    border-image-slice: 100%;
+    border-image-source: none;
+    border-image-width: 50px;
+    border-radius: 3vh;
+    background-color: #995533;
+    border-image: url('https://gdbrowser.com/assets/brownbox.png') 10% round;   
+}
+
+.img-box {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 250px;
+    min-height: 250px;
+    border: 2.5vh solid transparent;
+    border-image-outset: 0;
+    border-image-repeat: stretch;
+    border-image-slice: 100%;
+    border-image-source: none;
+    border-image-width: 50px;
+    border-radius: 3vh;
+    background-color: #995533;
+    border-image: url('https://gdbrowser.com/assets/brownbox.png') 10% round; 
+}
+
+input[type="radio"] {
+    transform: translatey(-3px);
 }

@@ -1,34 +1,18 @@
-const type1 = [
-    'auto',
-    'demon',
-    'easy',
-    'hard',
-    'harder',
-    'insane',
-    'normal',
-    'unrated'
-]
+$(document).ready(function() {
 
-const type2 = [
-    '',
-    '-featured',
-    '-epic'
-]
+    $("input").click(function() {
+        var img = $("input[name=dif]:checked").attr('id')
 
-const demonType = [
-    '-easy',
-    '-extreme',
-    '-hard',
-    '-insane',
-    '-medium',
-]
-
-function rnd() {
-    const rndImg = type1[Math.floor(Math.random() * type1.length)]
-    var rndImgType = type2[Math.floor(Math.random() * type2.length)]
-    if (rndImg == 'demon') {
-        var rndImgType = demonType[Math.floor(Math.random() * demonType.length)] + type2[Math.floor(Math.random() * type2.length)]
-    }
-
-    document.getElementById('img').src=`https://github.com/GDColon/GDBrowser/blob/master/assets/difficulties/${rndImg}${rndImgType}.png?raw=true`
-}
+        if (img == 'demon') {
+            $("input[name=ddif]").attr('style', 'display: inline-block')
+            $("label[id=demontype]").attr('style', 'display: inline-block')
+            var img = $("input[name=ddif]:checked").attr('id')
+        } else {
+            $("input[name=ddif]").attr('style', 'display: none')
+            $("label[id=demontype]").attr('style', 'display: none')
+            var img = $("input[name=dif]:checked").attr('id')
+        }
+        $('#img').attr('src', `https://gdbrowser.com/assets/difficulties/${img}.png`)
+        console.log(img)
+    })
+  });
