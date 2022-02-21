@@ -16,6 +16,11 @@ $(document).ready(function() {
         } else {
             var img = $("input[name=dif]:checked").attr('id')
         }
+
+        if (img == undefined) {
+            img = 'demon-hard'
+        }
+        
         $('#img').attr('src', `https://gdbrowser.com/assets/difficulties/${img}.png`)
         console.log(img)
     })
