@@ -258,6 +258,10 @@ a:active {
   position: relative;
 }
 
+.mention::before {
+  content: "@";
+}
+
 .mention {
   background-color: #5865f29f;
   border-radius: 5px;
