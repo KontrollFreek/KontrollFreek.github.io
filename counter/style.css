@@ -1,0 +1,23 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+
+  width: 100vw;
+  height: 100vh;
+
+  margin: 0;
+}
+
+p {
+  text-align: center;
+  max-width: 30rem;
+  width: 60vw;
+}
+
+.btnGrid {
+  display: grid;
+  gap: .5rem;
+}

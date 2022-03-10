@@ -1,0 +1,1 @@
+Useless project I made in 20 minutes to prove to my teacher I know how to use JS
