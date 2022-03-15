@@ -18,6 +18,7 @@
         <div>
             <p id="artist"></p>
             <p id="source"></p>
+            <p id="tag"></p>
         </div>
     </div>
     <div class="img">
@@ -32,6 +33,7 @@
     body {
         margin: .5rem;
         text-align: center;
+        overflow-x: hidden;
     }
 
     p {
@@ -39,7 +41,7 @@
     }
 
     #img {
-        max-height: 90vh;
+        max-height: 75vh;
         max-width: 96vw;
         outline: .15rem solid black;
         border-radius: .1rem;
@@ -152,6 +154,7 @@
 
             $('#artist').html(`Artist(s): ${res.images[0].artists.toString().split(',').join(', ')}`)
             $('#source').html(`Source: &nbsp<a href="${res.images[0].sources[0]}">${res.images[0].sources[0]}</a>`)
+            $('#tag').html(`Tag: ${param.charAt(0).toUpperCase() + param.slice(1)}`)
         }
     });
 
@@ -178,6 +181,7 @@
 
                 $('#artist').html(`Artist(s): ${res.images[0].artists.toString().split(',').join(', ')}`)
                 $('#source').html(`Source: &nbsp<a href="${res.images[0].sources[0]}">${res.images[0].sources[0]}</a>`)
+                $('#tag').html(`Tag: ${param.charAt(0).toUpperCase() + param.slice(1)}`)
             }
         });
     })
