@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yiff Gen</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="btn">
+        <button id="rel">Reload</button>
+        <button id="vjson">View JSON</button>
+    </div>
+    <div id="info"></div>
+    <div class="img">
+        <img id="img">
+    </div>
+    <div class="jsonContainer">
+        <pre id="json"></pre>
+    </div>
+</body>
+
+<style>
+    body {
+        margin: 0
+    }
+
+    #img {
+        max-height: 90vh;
+        max-width: 96vw;
+        outline: .15rem solid black;
+        border-radius: .1rem;
+        padding: .2rem;
+    }
+
+    .btn,
+    #info,
+    .jsonContainer {
+        display: flex;
+        justify-content: center;
+        border: 1rem;
+    }
+
+    pre {
+        outline: .1rem solid black;
+        border-radius: .1rem;
+        padding: .5rem;
+        margin: .5rem;
+        overflow-x: auto;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -pre-wrap;
+        white-space: -o-pre-wrap;
+        word-wrap: break-word;
+    }
+
+    .img {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+
+    button {
+        margin: 20px
+    }
+
+    /* pretty printing */
+
+    .string {
+        color: green;
+    }
+
+    .number {
+        color: darkorange;
+    }
+
+    .boolean {
+        color: blue;
+    }
+
+    .null {
+        color: magenta;
+    }
+
+    .key {
+        color: red;
+    }
+</style>
+
+<script>
+
+    function prettyPrint(json) {
+        if (typeof json != 'string') {
+            json = JSON.stringify(json, undefined, 2);
+        }
+        json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+        return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
+            var cls = 'number';
+            if (/^"/.test(match)) {
+                if (/:$/.test(match)) {
+                    cls = 'key';
+                } else {
+                    cls = 'string';
+                }
+            } else if (/true|false/.test(match)) {
+                cls = 'boolean';
+            } else if (/null/.test(match)) {
+                cls = 'null';
+            }
+            return '<span class="' + cls + '">' + match + '</span>';
+        });
+    }
+
+    const types = [
+        'andromorph',
+        'gay',
+        'gynomorph',
+        'lesbian',
+        'straight',
+        'bulge'
+    ]
+
+    var param = types[Math.floor(Math.random() * types.length)]
+
+    if (param === 'bulge') {
+        var q = param
+    } else {
+        var q = `yiff/${param}`
+    }
+
+    $.ajax({
+        url: `https://v2.yiff.rest/furry/${q}?notes=disabled`,
+        type: 'GET',
+        dataType: 'json',
+        success: function (res) {
+            $('#img').attr('src', res.images[0].url)
+
+            $('#json').html(prettyPrint(res))
+
+            $('#artist').html(`Artist(s): ${res.images[0].artists.toString().split(',').join(', ')}`)
+            $('#source').html(`Source: &nbsp<a href="${res.images[0].sources[0]}">${res.images[0].sources[0]}</a>`)
+        }
+    });
+
+    $("#rel").click(function () {
+
+
+
+        var param = types[Math.floor(Math.random() * types.length)]
+
+        if (param === 'bulge') {
+            var q = param
+        } else {
+            var q = `yiff/${param}`
+        }
+
+        $.ajax({
+            url: `https://v2.yiff.rest/furry/${q}?notes=disabled`,
+            type: 'GET',
+            dataType: 'json',
+            success: function (res) {
+                $('#img').attr('src', res.images[0].url)
+
+                $('#json').html(prettyPrint(res))
+
+                $('#artist').html(`Artist(s): ${res.images[0].artists.toString().split(',').join(', ')}`)
+                $('#source').html(`Source: &nbsp<a href="${res.images[0].sources[0]}">${res.images[0].sources[0]}</a>`)
+            }
+        });
+    })
+
+    $("#json").attr('style', 'display: none')
+
+    $("#vjson").click(function () {
+        if (document.getElementById("json").style.display !== "none") {
+            document.getElementById("json").style.display = "none";
+            document.getElementById("img").style.display = "flex";
+            $("#vjson").html('View JSON')
+        } else {
+            document.getElementById("json").style.display = "block";
+            document.getElementById("img").style.display = "none";
+            $("#vjson").html('Hide JSON')
+        }
+    })
+</script>
+
+</html>
