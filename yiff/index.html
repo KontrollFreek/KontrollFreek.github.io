@@ -14,7 +14,12 @@
         <button id="rel">Reload</button>
         <button id="vjson">View JSON</button>
     </div>
-    <div id="info"></div>
+    <div id="info">
+        <div>
+            <p id="artist"></p>
+            <p id="source"></p>
+        </div>
+    </div>
     <div class="img">
         <img id="img">
     </div>
@@ -25,7 +30,12 @@
 
 <style>
     body {
-        margin: 0
+        margin: .5rem;
+        text-align: center;
+    }
+
+    p {
+        margin: .3rem
     }
 
     #img {
@@ -48,7 +58,6 @@
         outline: .1rem solid black;
         border-radius: .1rem;
         padding: .5rem;
-        margin: .5rem;
         overflow-x: auto;
         white-space: pre-wrap;
         white-space: -moz-pre-wrap;
@@ -61,10 +70,11 @@
         display: flex;
         justify-content: center;
         align-content: center;
+        margin: 1rem;
     }
 
     button {
-        margin: 20px
+        margin: 1rem;
     }
 
     /* pretty printing */
