@@ -146,6 +146,8 @@
         type: 'GET',
         dataType: 'json',
         success: function (res) {
+            console.log(res)
+            
             $('#img').attr('src', res.images[0].url)
 
             $('#json').html(prettyPrint(res))
@@ -172,6 +174,8 @@
             type: 'GET',
             dataType: 'json',
             success: function (res) {
+                console.log(res)
+                
                 $('#img').attr('src', res.images[0].url)
 
                 $('#json').html(prettyPrint(res))
