@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yiff Gen</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="btn">
+        <button id="rel">Reload</button>
+        <button id="vjson">View JSON</button>
+    </div>
+    <div id="info">
+        <div>
+            <p id="artist"></p>
+            <p id="source"></p>
+            <p id="tag"></p>
+        </div>
+    </div>
+    <div class="img">
+        <img id="img">
+    </div>
+    <div class="jsonContainer">
+        <pre id="json"></pre>
+    </div>
+</body>
+
+<style>
+    body {
+        margin: .5rem;
+        text-align: center;
+        overflow-x: hidden;
+    }
+
+    p {
+        margin: .3rem
+    }
+
+    #img {
+        max-height: 75vh;
+        max-width: 96vw;
+        outline: .15rem solid black;
+        border-radius: .1rem;
+        padding: .2rem;
+    }
+
+    .btn,
+    #info,
+    .jsonContainer {
+        display: flex;
+        justify-content: center;
+        border: 1rem;
+    }
+
+    pre {
+        outline: .1rem solid black;
+        border-radius: .1rem;
+        padding: .5rem;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        text-align: left;
+    }
+
+    .img {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin: 1rem;
+    }
+
+    button {
+        margin: 1rem;
+    }
+
+    /* pretty printing */
+
+    .string {
+        color: green;
+    }
+
+    .number {
+        color: darkorange;
+    }
+
+    .boolean {
+        color: blue;
+    }
+
+    .null {
+        color: magenta;
+    }
+
+    .key {
+        color: red;
+    }
+</style>
+
+<script>
+
+    function prettyPrint(json) {
+        if (typeof json != 'string') {
+            json = JSON.stringify(json, undefined, 2);
+        }
+        json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+        return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
+            var cls = 'number';
+            if (/^"/.test(match)) {
+                if (/:$/.test(match)) {
+                    cls = 'key';
+                } else {
+                    cls = 'string';
+                }
+            } else if (/true|false/.test(match)) {
+                cls = 'boolean';
+            } else if (/null/.test(match)) {
+                cls = 'null';
+            }
+            return '<span class="' + cls + '">' + match + '</span>';
+        });
+    }
+
+    const types = [
+        'andromorph',
+        'gay',
+        'gynomorph',
+        'lesbian',
+        'straight',
+        'bulge'
+    ]
+
+    var param = types[Math.floor(Math.random() * types.length)]
+
+    if (param === 'bulge') {
+        var q = param
+    } else {
+        var q = `yiff/${param}`
+    }
+
+    $.ajax({
+        url: `https://v2.yiff.rest/furry/${q}?notes=disabled&_ua=${encodeURIComponent('kontroll.dev/yiff / v1.0 (KontrollFreek#0643; "Discord")')}`,
+        type: 'GET',
+        dataType: 'json',
+        success: function (res) {
+            console.log(res)
+            
+            $('#img').attr('src', res.images[0].url)
+
+            $('#json').html(prettyPrint(res))
+
+            $('#artist').html(`Artist(s): ${res.images[0].artists.toString().split(',').join(', ')}`)
+            $('#source').html(`Source: &nbsp<a href="${res.images[0].sources[0]}">${res.images[0].sources[0]}</a>`)
+            $('#tag').html(`Tag: ${param.charAt(0).toUpperCase() + param.slice(1)}`)
+        }
+    });
+
+    $("#rel").click(function () {
+
+        var param = types[Math.floor(Math.random() * types.length)]
+
+        if (param === 'bulge') {
+            var q = param
+        } else {
+            var q = `yiff/${param}`
+        }
+
+        $.ajax({
+            url: `https://v2.yiff.rest/furry/${q}?notes=disabled&_ua=${encodeURIComponent('kontroll.dev/yiff / v1.0 (KontrollFreek#0643; "Discord")')}`,
+            type: 'GET',
+            dataType: 'json',
+            success: function (res) {
+                console.log(res)
+                
+                $('#img').attr('src', res.images[0].url)
+
+                $('#json').html(prettyPrint(res))
+
+                $('#artist').html(`Artist(s): ${res.images[0].artists.toString().split(',').join(', ')}`)
+                $('#source').html(`Source: &nbsp<a href="${res.images[0].sources[0]}">${res.images[0].sources[0]}</a>`)
+                $('#tag').html(`Tag: ${param.charAt(0).toUpperCase() + param.slice(1)}`)
+            }
+        });
+    })
+
+    $("#json").attr('style', 'display: none')
+
+    $("#vjson").click(function () {
+        if (document.getElementById("json").style.display !== "none") {
+            document.getElementById("json").style.display = "none";
+            document.getElementById("img").style.display = "flex";
+            $("#vjson").html('View JSON')
+        } else {
+            document.getElementById("json").style.display = "block";
+            document.getElementById("img").style.display = "none";
+            $("#vjson").html('Hide JSON')
+        }
+    })
+</script>
+
+</html>
