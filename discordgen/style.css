@@ -7,6 +7,14 @@ body {
     overflow: hidden;
 }
 
+img.emoji {
+    height: 1.2em;
+    width: 1.2em;
+    margin: 0 .05em 0 .1em;
+    vertical-align: -0.1em;
+    transform: translatey(.15em);
+ }
+
 
 
 #header {
@@ -31,17 +39,19 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0.355rem 0;
 }
 
-#navbar *:not(#sep) {
-    width: 2.75rem;
-    height: 2.75rem;
+#navbar button,
+#navbar #img {
+    width: 2.65rem;
+    height: 2.65rem;
     background-color: #36393f;
     color: #dcddde;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0.3rem 0;
+    margin: 0.245rem 0;
     border-radius: 50%;
     transition: 0.2s;
     user-select: none;
@@ -52,7 +62,8 @@ body {
     text-transform: uppercase;
 }
 
-#navbar *:not(#sep):hover {
+#navbar button:hover,
+#navbar #img:hover {
     color: #fff;
     background-color: #5865f2;
     border-radius: 30%;
@@ -67,7 +78,7 @@ body {
     width: 32px;
     border-radius: 1px;
     background-color: #ffffff0f;
-    margin: 0.1rem 0;
+    margin: 0.2rem 0;
 }
 
 
@@ -112,14 +123,14 @@ body {
     background-color: #18191c;
     border-radius: 8px;
     box-shadow: 0 0 1rem #00000060;
-    width: 350px;
-    min-height: 160px;
+    width: 300px;
+    min-height: 10px;
 }
 
 #col {
-    background-color: #fff;
-    height: 80px;
-    width: 350px;
+    background-color: rgb(255, 255, 255);
+    height: 60px;
+    width: 300px;
     border-radius: 8px 8px 0 0;
     top: 0;
     z-index: 1;
@@ -127,8 +138,8 @@ body {
 }
 
 #main #stuff {
-    margin: 0.5rem;
-    height: calc(100% - 165px);
+    margin: 16px;
+    height: calc(100% - 150px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -136,7 +147,7 @@ body {
 
 #main #col #pfp {
     border-radius: 50%;
-    width: 110px;
-    border: 7px solid #18191c;
-    transform: translatex(20px) translatey(20px)
+    width: 90px;
+    border: 6px solid #18191c;
+    transform: translatex(16px) translatey(16px);
 }
