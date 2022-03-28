@@ -72,6 +72,11 @@ img.emoji {
     filter: brightness(0) invert(1);
 }
 
+#navbar #img,
+#navbar #img:hover {
+    background-color: transparent;
+}
+
 #navbar #sep {
     height: 2px;
     width: 32px;
