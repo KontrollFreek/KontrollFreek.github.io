@@ -5,7 +5,7 @@ $(window).on('load', function() {
 })
 
 $('#img').on('load', function() {
-    $(this).css('background-color', 'transparent')
+    $(this).css('background-color', '#00000000')
 })
 
 var loaded = 0

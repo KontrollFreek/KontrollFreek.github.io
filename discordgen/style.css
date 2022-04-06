@@ -14,6 +14,10 @@ img.emoji {
     vertical-align: -0.1em;
  }
 
+img {
+    object-fit: cover;
+}
+
 
 #loadscreen {
     position: absolute;
@@ -50,7 +54,8 @@ img.emoji {
     }
 }
 
-#loadscreen progress {
+#loadscreen progress,
+#loadscreen ::-webkit-progress-bar {
   width: 25vw;
   height: .15rem;
   background-color: #36393f;
@@ -59,7 +64,8 @@ img.emoji {
   border-radius: 1rem;
 }
 
-#loadscreen progress::-moz-progress-bar{
+#loadscreen ::-moz-progress-bar, 
+#loadscreen ::-webkit-progress-value {
     background: #fff;
     opacity: 0.5;
     border-radius: 1rem;
@@ -80,10 +86,8 @@ img.emoji {
 
 
 #navbar {
-    background-color: #202225;
     font-size: 1rem;
     text-align: center;
-    min-height: 100vh;
     width: 4rem;
     float: left;
     display: flex;
@@ -91,12 +95,17 @@ img.emoji {
     align-items: center;
     padding: 0.355rem 0;
     overflow-y: auto;
+    height: 100vh;
+    background-color: #202225;
+    
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 #navbar button,
 #navbar #img {
-    width: 2.65rem;
-    height: 2.65rem;
+    width: 47px;
+    height: 47px !important;
     background-color: #36393f;
     color: #dcddde;
     display: flex;
@@ -112,7 +121,6 @@ img.emoji {
     font-size: 1rem;
     text-transform: uppercase;
     cursor: pointer;
-    object-fit: cover;
 }
 
 #navbar button:hover,
@@ -184,7 +192,7 @@ img.emoji {
 #col {
     background-color: rgb(255, 255, 255);
     height: 60px;
-    width: 300px;
+    max-width: 300px;
     border-radius: 8px 8px 0 0;
     top: 0;
     z-index: 1;
