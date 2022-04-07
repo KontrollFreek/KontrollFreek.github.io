@@ -14,7 +14,6 @@ header {
 
 .swal2-container.swal2-center>.swal2-popup {
   background-color: rgb(40, 40, 40) !important;
-  color: rgb(255, 255, 255) !important;
 }
 
 .swal2-container.swal2-center>.swal2-popup>.swal2-actions>.swal2-confirm.swal2-styled {
