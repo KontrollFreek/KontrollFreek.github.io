@@ -1,8 +1,9 @@
-*{
+* {
   font-family: 'Montserrat', sans-serif;
-  color: rgb(255, 255, 255) !important;
+  color: rgb(255, 255, 255);
 }
-header{
+
+header {
   position: absolute;
   top: 0;
   left: 0;
@@ -10,25 +11,32 @@ header{
   height: 100px;
   background: rgb(40, 40, 40);
 }
-#sitename{
+
+.swal2-container.swal2-center>.swal2-popup{
+  background-color: rgb(40, 40, 40) !important;
+  color: rgb(255, 255, 255) !important;
+}
+
+#sitename {
   position: fixed;
   top: 30px;
   left: 30px;
   font-size: 2em;
 }
 
-#helo{
+#helo {
   font-size: 100%;
 }
 
-#pc-link{
+#pc-link {
   position: fixed;
   text-align: right;
   top: 35px;
   right: 30px;
   font-size: 1.3em;
 }
-#list{
+
+#list {
   background: rgb(50, 50, 50);
   position: fixed;
   top: 100px;
@@ -36,7 +44,8 @@ header{
   width: 30%;
   overflow-y: auto;
 }
-#additional-information{
+
+#additional-information {
   background: rgb(70, 70, 70);
   position: fixed;
   top: 100px;
@@ -44,7 +53,8 @@ header{
   width: 30%;
   overflow-y: auto;
 }
-#info{
+
+#info {
   background: rgb(80, 80, 80);
   position: fixed;
   top: 100px;
@@ -52,78 +62,100 @@ header{
   width: 40%;
   overflow-y: auto;
 }
-#inner-info, #inner-right-info{
+
+#inner-info,
+#inner-right-info {
   padding: 1em;
 }
-.entry{
+
+.entry {
   padding: 1em;
 
 }
-.entry:nth-child(odd){
+
+.entry:nth-child(odd) {
   background: rgb(40, 40, 40);
 }
-.entry:hover{
+
+.entry:hover {
   background: rgb(40, 40, 40);
   cursor: pointer;
-  color:rgba(255, 255, 255,0.5) !important;
+  color: rgba(255, 255, 255, 0.5) !important;
 }
 
-A:hover {color:rgb(40, 40, 40) !important; text-decoration:none; }
+A:hover {
+  color: rgb(40, 40, 40) !important;
+  text-decoration: none;
+}
 
-.selected{
+.selected {
   background: rgb(80, 80, 80) !important;
 }
-.author{
+
+.author {
   font-variant: small-caps;
 }
-#levelname{
+
+#levelname {
   font-size: 1.7em;
   font-weight: bold;
 
 }
-#levelauthor{
+
+#levelauthor {
   font-size: 1.1em;
 }
-#leveldescription{
+
+#leveldescription {
   font-size: 0.8em;
   font-variant: small-caps;
 
 }
-.vid{
+
+.vid {
   width: 100%;
 }
-#records{
+
+#records {
   width: 100%;
 }
-#records-title{
+
+#records-title {
   font-size: 1.5em;
   font-weight: bold;
   color: rgb(255, 255, 255);
 }
-#records-table{
+
+#records-table {
   width: 100%;
 }
-#explanation-simple-title{
+
+#explanation-simple-title {
   font-size: 1.5em;
   font-weight: bold;
   color: rgb(255, 255, 255);
 }
-#explanation-simple{
+
+#explanation-simple {
   font-size: 18px;
   font-weight: bold;
   color: rgb(255, 255, 255);
 }
-.interentry{
+
+.interentry {
   width: 100%;
   padding: 0.5em;
 }
-.record-entry:nth-child(even){
+
+.record-entry:nth-child(even) {
   background: rgb(45, 45, 45)
 }
-.record-entry:nth-child(odd){
+
+.record-entry:nth-child(odd) {
   background: rgb(40, 40, 40)
 }
-#block{
+
+#block {
   position: fixed;
   top: 0;
   left: 0;
@@ -133,7 +165,8 @@ A:hover {color:rgb(40, 40, 40) !important; text-decoration:none; }
   color: rgb(255, 255, 255);
   font-size: 3em;
 }
-.hacked{
+
+.hacked {
   background: rgb(255, 79, 25);
   color: white;
   font-weight: strong;
@@ -141,7 +174,8 @@ A:hover {color:rgb(40, 40, 40) !important; text-decoration:none; }
   padding: 0.4em;
   border-radius: 1em;
 }
-.p-hacked{
+
+.p-hacked {
   background: rgb(255, 99, 52);
   color: white;
   font-weight: strong;
@@ -149,7 +183,8 @@ A:hover {color:rgb(40, 40, 40) !important; text-decoration:none; }
   padding: 0.4em;
   border-radius: 1em;
 }
-#hi{
+
+#hi {
   position: fixed;
   top: 0;
   left: 0;
@@ -158,6 +193,7 @@ A:hover {color:rgb(40, 40, 40) !important; text-decoration:none; }
   background: black;
   z-index: 99;
 }
+
 #user-rank {
   font-size: 20px;
   font-weight: bold;
@@ -166,6 +202,7 @@ A:hover {color:rgb(40, 40, 40) !important; text-decoration:none; }
 Swal {
   color: black;
 }
+
 /* scroll bar [DO NOT MODIFY] */
 /* width */
 ::-webkit-scrollbar {
@@ -174,17 +211,17 @@ Swal {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #575757; 
+  background: #575757;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #777; 
+  background: #777;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(105, 105, 105); 
+  background: rgb(105, 105, 105);
 }
 
 .footer {

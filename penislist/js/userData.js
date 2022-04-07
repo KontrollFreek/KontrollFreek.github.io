@@ -107,7 +107,7 @@ function getUserData(user) {
             'Best Record : '+user_data[user].highest+'<br>'+
             'Completed Levels : '+clears+' Level(s)<br>'+
             '<br>Record List : '+progresses+'<br>'+
-            '</strong></center>'
+            '</strong></center>',
     });
 
 }
