@@ -24,33 +24,15 @@
     </script>
     <script type='text/javascript' src="js/sweetalert.min.js">
     </script>
+    <script type='text/javascript' src="js/twemoji.min.js">
+    </script>
     <script type='text/javascript' src="js/list.js">
     </script>
     <script type='text/javascript' src="js/userData.js">
     </script>
-    <script type='text/javascript'>
-        var icons = [
-            '<i class="far fa-lemon"> </i>',
-            '<i class="far fa-angry"> </i>',
-            '<i class="fas fa-wheelchair"> </i>',
-            '<i class="fas fa-hands-wash"> </i>',
-            '<i class="far fa-sad-tear"> </i>',
-            '<i class="far fa-trash-alt"> </i>',
-            '<i class="fas fa-dumpster-fire"> </i>',
-            '<i class="fas fa-bacon"> </i>',
-            '<i class="fas fa-hand-middle-finger"> </i>',
-            '<i class="far fa-smile"> </i>',
-            '<i class="fas fa-wifi"> </i>',
-            '<i class="fab fa-angellist"> </i>',
-            '<i class="fas fa-asterisk"> </i>',
-            '<i class="far fa-compass"> </i>',
-            '<i class="fas fa-head-side-mask"> </i>',
-        ];
-        document.getElementById('helo').innerHTML = icons[Math.floor(Math.random() * (icons.length))]
-    </script>
     <cover-all id="hi">
         <header id="dl-header">
-            <div id="sitename"><strong>The Penis List </strong><span id="helo"></span>
+            <div id="sitename"><strong>The Penis List </strong><span id="icon"></span>
                 <small><em id="version-node"></em></small>
             </div>
             <div id="pc-link"><a href="https://discord.gg/W7FPztAFbs"><em><strong>Official Discord <i
@@ -80,8 +62,8 @@
                         <div id="qualification"><strong id="levelqualify"></strong>% or better required to
                             qualify<br><br>
                             <center><a target="_blank"
-                                    href="https://discord.com/channels/784647615483740191/797654563712532480/797876998680477726">>
-                                    Submit Record << /a>
+                                    href="https://discord.com/channels/784647615483740191/797654563712532480/797876998680477726">
+                                    > Submit Record << /a>
                             </center>
                         </div>
                         <br>
@@ -95,8 +77,7 @@
         <div id="additional-information">
             <div id="inner-right-info">
                 <div><strong>Do you have a record to submit? Was your record typed incorrectly or does it need updating?
-                        <u><a target="_blank"
-                                href="https://discord.com/channels/784647615483740191/797654563712532480/797876998680477726">Submit
+                        <u><a target="_blank" href="https://forms.gle/UFB1ChmLdWyqqBqK6">Submit
                                 your
                                 record!</a></u></strong></div>
                 <br>
@@ -133,7 +114,7 @@
                         <li>The level is not longer than 30 seconds</li>
                         <li>The level is by you or verified by you</li>
                         <li>The level must be completable on all platforms</li>
-                        <li>Does not have excessive consistency clicks (no spam challenges <i class="far fa-angry"></i>)
+                        <li>Does not have excessive consistency clicks (no spam challenges 😠)
                         </li>
                         <li>We do not accept levels that will be placed in the legacy list</li>
                     </ul>
@@ -143,9 +124,11 @@
                         Changelog:
                         <br>
                     <ul>
-                        The rules have been updated to be more strict while also preventing very stupid levels from
-                        being uploaded.
-                        </p>
+                        <li>Changed the site to parse the single emoji to twemoji</li>
+                        <li>Updated the user score popups to be readable</li>
+                        <li>Sped up the random icon generator</li>
+                        <li>Fixed a stupid formatting error like seriously how did i not notice it right in front of me</li>
+                    </ul>
                 </div>
             </div>
             <hr>
@@ -432,6 +415,27 @@
             return decodeURIComponent(results[2].replace(/\+/g, " "));
         }
         load(l * 1)
+    </script>
+    <script type='text/javascript'>
+        const icons = [
+            '<i class="far fa-lemon"> </i>',
+            '<i class="far fa-angry"> </i>',
+            '<i class="fas fa-wheelchair"> </i>',
+            '<i class="fas fa-hands-wash"> </i>',
+            '<i class="far fa-sad-tear"> </i>',
+            '<i class="far fa-trash-alt"> </i>',
+            '<i class="fas fa-dumpster-fire"> </i>',
+            '<i class="fas fa-bacon"> </i>',
+            '<i class="fas fa-hand-middle-finger"> </i>',
+            '<i class="far fa-smile"> </i>',
+            '<i class="fas fa-wifi"> </i>',
+            '<i class="fab fa-angellist"> </i>',
+            '<i class="fas fa-asterisk"> </i>',
+            '<i class="far fa-compass"> </i>',
+            '<i class="fas fa-head-side-mask"> </i>',
+        ];
+        $('span#icon').html(icons[Math.floor(Math.random() * (icons.length))])
+        twemoji.parse($('body')[0])
     </script>
     <noscript>
         <div id="block">

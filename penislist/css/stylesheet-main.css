@@ -20,15 +20,18 @@ header {
   background-color: rgb(50, 205, 50) !important;
 }
 
+img.emoji {
+  height: 1em;
+  width: 1em;
+  margin: 0 .05em 0 .1em;
+  vertical-align: -0.1em;
+}
+
 #sitename {
   position: fixed;
   top: 30px;
   left: 30px;
   font-size: 2em;
-}
-
-#helo {
-  font-size: 100%;
 }
 
 #pc-link {
