@@ -1,5 +1,5 @@
 :root {
-    --width: calc(100vh - 37px)
+    --height: calc(100vh - 20px)
 }
 
 
@@ -98,7 +98,7 @@ img {
     text-align: center;
     width: 72px;
     float: left;
-    height: var(--width);
+    height: var(--height);
     background-color: #202225;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -151,7 +151,7 @@ img {
     background-color: #2f3136;
     font-size: 1rem;
     text-align: center;
-    height: var(--width);
+    height: var(--height);
     width: 216px;
     float: left;
     overflow-y: scroll;
@@ -177,8 +177,8 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: var(--width);
-    width: calc(100vw - 17.5rem);
+    height: var(--height);
+    width: calc(100vw - 305px);
     float: right;
 }
 
