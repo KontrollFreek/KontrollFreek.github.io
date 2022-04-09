@@ -15,14 +15,16 @@ body {
 }
 
 img.emoji {
-    height: 1.2em;
-    width: 1.2em;
+    height: 1.1em;
+    width: 1.1em;
     margin: 0 .05em 0 .1em;
     vertical-align: -0.1em;
 }
 
 img {
     object-fit: cover;
+    user-select: none;
+    pointer-events: none;
 }
 
 
@@ -202,9 +204,7 @@ img {
 #main #stuff {
     margin: 16px;
     height: calc(100% - 150px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 268px;
 }
 
 #main #col #pfp {
@@ -214,6 +214,26 @@ img {
     border: 6px solid #18191c;
     transform: translatex(16px) translatey(16px);
     cursor: pointer;
+}
+
+#main #col #status img{
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    background-color: #18191c;
+    border: 7px solid #18191c;
+    transform: translatex(-23px) translatey(13px);
+}
+
+#main #user {
+    font-family: Ginto Normal;
+    font-weight: 500;
+    font-size: 20px;
+    float: left;
+}
+
+#main #user #tag {
+    color: #b9bbbe
 }
 
 
