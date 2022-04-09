@@ -74,11 +74,13 @@ img {
     float: left;
     width: 100vw;
     font-family: Ginto Normal;
+    /* display: none; */
 }
 
 
 
 #navbar {
+    padding: 12px 0 0;
     font-size: 1rem;
     text-align: center;
     width: 72px;
@@ -92,14 +94,14 @@ img {
 
 #navbar button,
 #navbar #img {
-    width: 47px;
-    height: 47px !important;
+    width: 48px;
+    height: 48px;
     background-color: #36393f;
     color: #dcddde;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 4px auto;
+    margin: 0 auto 8px auto;
     border-radius: 50%;
     transition: 0.2s;
     user-select: none;
@@ -133,7 +135,7 @@ img {
     width: 32px;
     border-radius: 1px;
     background-color: #ffffff0f;
-    margin: 3px auto;
+    margin: 0 auto 8px auto;
 }
 
 
@@ -143,7 +145,7 @@ img {
     font-size: 1rem;
     text-align: center;
     height: var(--height);
-    width: 216px;
+    width: 240px;
     float: left;
     overflow-y: scroll;
     scrollbar-width: none;
@@ -169,7 +171,7 @@ img {
     justify-content: center;
     align-items: center;
     height: var(--height);
-    width: calc(100vw - 305px);
+    width: calc(100vw - 312px);
     float: right;
 }
 
