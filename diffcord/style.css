@@ -52,31 +52,16 @@ img {
         opacity: 0.5;
         transform: scale(1);
     }
+
     50% {
         opacity: 1;
         transform: scale(1.05);
     }
+
     100% {
         opacity: 0.5;
         transform: scale(1);
     }
-}
-
-#loadscreen progress,
-#loadscreen progress::-webkit-progress-bar {
-  width: 25vw;
-  height: .15rem;
-  background-color: #36393f;
-  margin: 1rem;
-  border: none;
-  border-radius: 1rem;
-}
-
-#loadscreen progress::-moz-progress-bar, 
-#loadscreen progress::-webkit-progress-value {
-    background: #fff;
-    opacity: 0.5;
-    border-radius: 1rem;
 }
 
 
@@ -127,13 +112,19 @@ img {
 }
 
 #navbar button:hover,
-#navbar #img:hover {
+#navbar #img:hover,
+#navbar button:focus,
+#navbar #img:focus,
+#navbar button.hover,
+#navbar #img.hover {
     color: #fff;
     background-color: #5865f2;
     border-radius: 30%;
 }
 
-#navbar button:hover #svg {
+#navbar button:hover #svg,
+#navbar button:focus #svg,
+#navbar button #svg.hover {
     filter: brightness(0) invert(1);
 }
 
@@ -237,12 +228,14 @@ img {
 
 @keyframes rotation {
     0% {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
     }
+
     30% {
         transform: rotate(0deg);
     }
+
     100% {
-      transform: rotate(360deg);
+        transform: rotate(360deg);
     }
 }
