@@ -11,7 +11,7 @@ $(window).on('load', function () {
             $('#modalcenter').fadeIn('fast')
             $('#modal').css('transform', 'scale(1)')
         }
-    }, 700)
+    }, 100)
 })
 
 $('#nocookies').click(function () {
