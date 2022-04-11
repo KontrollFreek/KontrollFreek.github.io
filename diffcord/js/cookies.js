@@ -18,7 +18,7 @@ $('#nocookies').click(function () {
     $('#modalcenter').fadeOut('fast')
     $('#modal').css('transform', 'scale(0)')
 
-    $.cookie('new-user', 'false')
+    $.cookie('new-user', null)
     $.cookie('use-cookies', 'false')
 })
 

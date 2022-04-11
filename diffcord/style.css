@@ -59,20 +59,20 @@ button:not(#navbar button) {
 
 
 .red {
-    background-color: #f04747;
+    background-color: #ed4245;
 }
 
 .red:hover {
-    background-color: #f04747;
+    background-color: #d53b3e;
 }
 
 
 .green {
-    background-color: #43b581;
+    background-color: #3ba55c;
 }
 
 .green:hover {
-    background-color: #43b581;
+    background-color: #359553;
 }
 
 
@@ -81,7 +81,7 @@ button:not(#navbar button) {
 }
 
 .gray:hover {
-    background-color: #4f545c;
+    background-color: #474c53;
 }
 
 
