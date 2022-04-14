@@ -1,5 +1,5 @@
 $('#sidebar div').hide()
-$('#sidebar #1').show()
+$('#sidebar #0').show()
 $('#navbar button').click(function() {
     $('#sidebar div').hide()
     $('#navbar *').removeClass('hover')

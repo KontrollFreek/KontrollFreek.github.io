@@ -319,7 +319,6 @@ a:hover {
 #sidebar {
     background-color: #2f3136;
     font-size: 1rem;
-    text-align: center;
     height: var(--height);
     width: 240px;
     float: left;
@@ -330,13 +329,20 @@ a:hover {
 
 #sidebar h1 {
     padding: 0;
-    margin: 1rem 0;
+    margin: 1rem 0.5rem;
     font-size: 1.3rem;
     text-transform: capitalize;
 }
 
 #sidebar * {
     padding: 1rem 0.5rem;
+}
+
+#sidebar img {
+    padding: 0;
+    width: 50%;
+    margin: .5rem;
+    opacity: .05;
 }
 
 
@@ -472,7 +478,7 @@ a:hover {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    transform: translatex(-19.5px) translatey(4px);
+    transform: translatex(-19px) translatey(5px);
 }
 
 #main #game>#data {
