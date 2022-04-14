@@ -59,6 +59,7 @@ code {
 a {
     color: #00aff4;
     text-decoration: none;
+    padding: 0;
 }
 
 a:hover {
@@ -329,13 +330,12 @@ a:hover {
 
 #sidebar h1 {
     padding: 0;
-    margin: 1rem 0.5rem;
     font-size: 1.3rem;
     text-transform: capitalize;
 }
 
-#sidebar * {
-    padding: 1rem 0.5rem;
+#sidebar>* {
+    margin: 1rem 0.5rem;
 }
 
 #sidebar img {
