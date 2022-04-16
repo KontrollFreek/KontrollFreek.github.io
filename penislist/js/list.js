@@ -101,10 +101,10 @@ const d = {
 		{
 			"vids": [
 				{
-					"user": "",
-					"link": "",
-					"percent": 0,
-					"hz": ""
+					"user": "AdoraHGD",
+					"link": "https://www.youtube.com/watch?v=7cOq4nqj3EU",
+					"percent": 100,
+					"hz": "360hz"
 				},
         
 			],
@@ -189,6 +189,12 @@ const d = {
         {
 					"user": "RegainedORU",
 					"link": "https://www.youtube.com/watch?v=B1UD3jfyTHs",
+					"percent": 100,
+					"hz": "360hz"
+				},
+				{
+					"user": "AdoraHGD",
+					"link": "https://www.youtube.com/watch?v=fbLgOSEyTSo",
 					"percent": 100,
 					"hz": "360hz"
 				},
@@ -595,6 +601,12 @@ const d = {
 					"percent": 100,
 					"hz": "144hz"
 				},
+				{
+					"user": "HanoCrux",
+					"link": "https://youtu.be/kzmsyl_yyFg",
+					"percent": 100,
+					"hz": "60hz"
+				},
         
 			],
 			"name": "Naite",
@@ -692,6 +704,12 @@ const d = {
         {
 					"user": "mysteriousbh",
 					"link": "https://youtu.be/ednzSOIfAk8",
+					"percent": 100,
+					"hz": "360hz"
+				},
+				{
+					"user": "AdoraHGD",
+					"link": "https://youtu.be/Ues7mtilXy8",
 					"percent": 100,
 					"hz": "360hz"
 				},
@@ -933,6 +951,12 @@ const d = {
         {
 					"user": "mysteriousbh",
 					"link": "https://youtu.be/PEAEzNwBhe4",
+					"percent": 100,
+					"hz": "360hz",
+				},
+				{
+					"user": "AdoraHGD",
+					"link": "https://youtu.be/WUol141nOy0",
 					"percent": 100,
 					"hz": "360hz",
 				},
@@ -1884,6 +1908,12 @@ const d = {
 					"link": "https://youtu.be/_fJwGMEWcik",
 					"percent": 100,
 					"hz": "60hz"
+				},
+				{
+					"user": "AdoraHGD",
+					"link": "https://youtu.be/8Ih7umpoUEU",
+					"percent": 100,
+					"hz": "360hz"
 				},
 
 			],
