@@ -61,10 +61,7 @@
                         <div id="records-title"><strong>Records</strong></div><br>
                         <div id="qualification"><strong id="levelqualify"></strong>% or better required to
                             qualify<br><br>
-                            <center><a target="_blank"
-                                    href="https://discord.com/channels/784647615483740191/797654563712532480/797876998680477726">
-                                    > Submit Record <</a>
-                            </center>
+                            <center><a target="_blank"href="https://discord.com/channels/784647615483740191/797654563712532480/797876998680477726">> Submit Record <</a></center>
                         </div>
                         <br>
                     </center>
@@ -124,11 +121,7 @@
                         Changelog:
                         <br>
                     <ul>
-                        <li>Changed the site to parse the single emoji to twemoji</li>
-                        <li>Updated the user score popups to be readable</li>
-                        <li>Sped up the random icon generator</li>
-                        <li>Updated the FPS cap to 360 instead of 300</li>
-                        <li>Fixed a stupid formatting error like seriously how did i not notice it right in front of me</li>
+                        <li>Discord videos can now be used in the list</li>
                     </ul>
                 </div>
             </div>
@@ -341,11 +334,13 @@
                 load(0)
             } else {
                 if (entry.verificationVid !== null && entry.verificationVid !== "") {
-                    entry.verificationVid = entry.verificationVid
-                        .replace(/www\.youtube.com\/watch\?v=/gi, '')
-                        .replace(/\/youtu\.be/gi, '')
-                        .replace(/&t=\d+s/gi, '')
-                        .replace(/https:\/\//gi, '')
+                    if (entry.verificationVid.startsWith('https://youtu') || entry.verificationVid.startsWith('https://www.youtu')) {
+                        entry.verificationVid = entry.verificationVid
+                            .replace(/www\.youtube.com\/watch\?v=/gi, '')
+                            .replace(/\/youtu\.be/gi, '')
+                            .replace(/&t=\d+s/gi, '')
+                            .replace(/https:\/\//gi, '')
+                    }
                 }
                 var rank = 0;
                 if (entry.key == null) {
@@ -376,7 +371,8 @@
                 $("#leveldescription").text(entry.desc);
                 $("#levelvid").empty();
                 if (entry.verificationVid !== null && entry.verificationVid !== "") {
-                    $("#levelvid").html(`<hr><iframe class="vid" height="300" src="https://www.youtube.com/embed/${entry.verificationVid}?rel=0" frameborder="0" allowfullscreen></iframe>`);
+                    if (entry.verificationVid.startsWith('https://media.discordapp') || entry.verificationVid.startsWith('https://cdn.discordapp')) { $("#levelvid").html(`<hr><video class="vid" src="${entry.verificationVid}" height="300" controls poster="/video/wind-8a1cd93f.png"></video>`) }
+                    else { $("#levelvid").html(`<hr><iframe class="vid" height="300" src="https://www.youtube.com/embed/${entry.verificationVid}?rel=0" frameborder="0" allowfullscreen></iframe>`) }
                 }
                 $("#levelqualify").text(entry.percentToQualify);
                 $("#records-score").html(`<strong>Points when completed : ${getPoint(rank)}</strong>`);
@@ -436,14 +432,17 @@
             '<i class="fas fa-head-side-mask"> </i>',
         ];
         $('span#icon').html(icons[Math.floor(Math.random() * (icons.length))])
-        twemoji.parse($('body')[0])
+            twemoji.parse($('body')[0])
     </script>
     <script type="text/javascript">
-        Swal.fire({
-        title : '⚠ Warning ⚠',
-        html : 'This version of the website is a <strong>static version</strong>, and will only be used as a backup while the main site is down.',
-        confirmButtonText: 'Got it'
+        $(window).on('load', function () {
+            Swal.fire({
+            title: '⚠ Warning ⚠',
+            html: 'This version of the website is a <strong>static version</strong>, and will only be used as a backup while the main site is down.',
+            confirmButtonText: 'Got it'
         })
+        twemoji.parse($('body')[0])
+    })
     </script>
     <noscript>
         <div id="block">

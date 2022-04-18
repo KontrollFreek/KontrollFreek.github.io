@@ -120,6 +120,7 @@ A:hover {
 
 .vid {
   width: 100%;
+  background-color: #000;
 }
 
 #records {
@@ -205,10 +206,6 @@ A:hover {
   font-weight: bold;
 }
 
-Swal {
-  color: black;
-}
-
 /* scroll bar [DO NOT MODIFY] */
 /* width */
 ::-webkit-scrollbar {
@@ -228,17 +225,4 @@ Swal {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(105, 105, 105);
-}
-
-.footer {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #23272a;
-  color: #fff;
-  text-align: center;
-  font-size: 19px;
-  font-weight: 400;
-  z-index: 100;
 }
