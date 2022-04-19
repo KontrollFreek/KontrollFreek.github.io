@@ -1,11 +1,11 @@
 $(window).on('load', function () {
     $.cookie('last-visited', Date.now(), {path: "/; SameSite=Lax", secure: true})
+    if ($.cookie('new-user') == undefined) {$.cookie('new-user') == 'true'}
     $('#modalcenter').hide()
     $('#modal').css('transform', 'scale(0)')
     setTimeout(function () {
-        if ($.cookie('new-user') == undefined || $.cookie('new-user') == 'true') {
+        if ($.cookie('new-user') == 'true') {
             $.cookie('new-user', 'true', {path: "/; SameSite=Lax", secure: true})
-            $.cookie('use-cookies', 'true', {path: "/; SameSite=Lax", secure: true})
             $('#modalcenter').fadeIn('fast')
             $('#modal').css('transform', 'scale(1)')
         }
