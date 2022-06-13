@@ -26,7 +26,7 @@
     </script>
     <script type='text/javascript' src="js/twemoji.min.js">
     </script>
-    <script type='text/javascript' src="https://penislist.kontrollfreek.repl.co/list.js">
+    <script type='text/javascript' src="js/list.js">
     </script>
     <script type='text/javascript' src="js/userData.js">
     </script>
@@ -290,7 +290,7 @@
                 legacy_count++;
             }
         }
-        $("#version-node").text("(beta " + version[0] + "." + version[1] + "." + version[2] + ")");
+        $("#version-node").text("(v " + version[0] + "." + version[1] + "." + version[2] + ")");
         list.sort(function (a, b) {
             var legacy_count = 0;
             for (var i = 0; i < list.length; i++) {
@@ -433,6 +433,16 @@
         ];
         $('span#icon').html(icons[Math.floor(Math.random() * (icons.length))])
             twemoji.parse($('body')[0])
+    </script>
+    <script type="text/javascript">
+        $(window).on('load', function () {
+            Swal.fire({
+            title: '⚠ Warning ⚠',
+            html: 'This version of the website is a <strong>static version</strong>, and will only be used as a backup while the main site is down.',
+            confirmButtonText: 'Got it'
+        })
+        twemoji.parse($('body')[0])
+    })
     </script>
     <noscript>
         <div id="block">
