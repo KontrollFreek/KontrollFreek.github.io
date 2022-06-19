@@ -17,16 +17,15 @@
     <meta id="meta-desc" property="og:description" content="Penis List">
     <meta name="viewport" content="user-scalable=no">
     <meta charset="UTF-8">
+    <script type='text/javascript' src="https://penislist.kontrollfreek.repl.co/list.js"></script>
 </head>
 
 <body>
     <script type='text/javascript' src="js/jquery-3.2.1.min.js">
     </script>
-    <script type='text/javascript' src="js/sweetalert.min.js">
+    <script type='text/javascript' src="js/sweetalert2.min.js">
     </script>
     <script type='text/javascript' src="js/twemoji.min.js">
-    </script>
-    <script type='text/javascript' src="https://penislist.kontrollfreek.repl.co/list.js">
     </script>
     <script type='text/javascript' src="js/userData.js">
     </script>
@@ -61,7 +60,8 @@
                         <div id="records-title"><strong>Records</strong></div><br>
                         <div id="qualification"><strong id="levelqualify"></strong>% or better required to
                             qualify<br><br>
-                            <center><a target="_blank"href="https://discord.com/channels/784647615483740191/797654563712532480/797876998680477726">> Submit Record <</a></center>
+                            <center><a target="_blank" href="https://forms.gle/UFB1ChmLdWyqqBqK6">> Submit Record << /a>
+                            </center>
                         </div>
                         <br>
                     </center>
@@ -84,7 +84,14 @@
                         <a href="https://twitter.com/KontrollF"> <i class="fas fa-crown"></i> KontrollFreek</a>
                     </li>
                     <li>
-                        <a href="https://twitter.com/Entropyowo"> <i class="fas fa-crown"></i> Entropy</a>
+                        <a href="https://twitter.com/Entropyowo"> <i class="fas fa-crown"></i> Chloe</a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/JamesFlorio5"> <i class="fas fa-crown"></i> RegainedORU</a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/channel/UCDeyQBRtAt6Htq3mYHGSAtg"> <i class="fas fa-crown"></i>
+                            Alex Wave</a>
                     </li>
                 </div>
                 <div>
@@ -178,7 +185,7 @@
     </script>
     <script name="userpoint" type="text/javascript">
         function getPoint(rank) {
-            if (rank > 150) {
+            if (rank > 50) {
                 return roundNumber(15, 3);
             } else {
                 return roundNumber((100 / Math.sqrt(((rank - 1) / 50) + 0.444444)) - 50, 3);
@@ -219,8 +226,8 @@
                 point_rank = rank;
             }
             hzpoint = 1 + (hzpoint * ((50 - point_rank) / 50));
-            if (rank > 150) {
-                return 0;
+            if (rank > 50) {
+                return 15;
             } else {
                 var score = roundNumber((((100 / Math.sqrt(((rank - 1) / 50) + 0.444444)) - 50) * hzpoint) * ((percent - (cutline - 1)) / (100 - (cutline - 1))), 3);
                 if (percent != 100) {
@@ -235,49 +242,80 @@
                 html: list[rank - 1].more + '.'
             });
         }
-        var rank_node = $("#user-rank");
+
         var rank_data = [];
+        var verify_data = []
         for (var i = 0; i < list.length; i++) {
-            var entry = list[i];
-            for (var a = 0; a < entry.vids.length; a++) {
-                var entry2 = entry.vids[a];
-                var isLoot = false;
-                for (var b = 0; b < rank_data.length; b++) {
-                    if (rank_data[b].name.toUpperCase() == entry2.user.toUpperCase()) {
-                        isLoot = true;
-                    }
-                }
-                var po;
-                po = getUserPoint(i + 1, entry2.percent, entry.percentToQualify, entry2.hz);
-                if (isLoot == true) {
-                    for (var b = 0; b < rank_data.length; b++) {
-                        var user_name = rank_data[b].name.toUpperCase();
-                        var data_name = entry2.user.toUpperCase();
-                        if (user_name == data_name) {
-                            rank_data[b].point = rank_data[b].point + po;
-                        }
-                    }
-                } else {
-                    rank_data.push({ name: entry2.user, point: po });
+            for (var a = 0; a < list[i].vids.length; a++) {
+                if (!list[i].vids[a].user == '') {
+                    rank_data.push({ level: list[i].name, rank: i + 1, percent: list[i].vids[a].percent, name: list[i].vids[a].user, point: getPoint(i + 1) })
                 }
             }
-        }
-        var sortingField = "point"
-        rank_data.sort(function (a, b) {
-            return b[sortingField] - a[sortingField];
-        });
-        for (var i = 0; i < rank_data.length; i++) {
-            rank_data[i].point = roundNumber(rank_data[i].point, 3);
+            if (list[i].author.includes('[')) list[i].author = list[i].author.split('[')[1].replace(']', '');
+            verify_data.push({ level: list[i].name, rank: i + 1, point: getPoint(i + 1), name: list[i].author })
         }
 
-        rank_data = userList();
-        var rank = `<ol>`;
-        for (var i = 0; i < rank_data.length; i++) {
-            sc = `getUserData(${i})`;
-            rank = `${rank} <span onclick="${sc}" style="cursor:pointer">${i + 1}. ${rank_data[i].name} : ${rank_data[i].point} ➦</span><br>`;
+        const result_rank = Object.values(rank_data.reduce((r, { name, point }) => {
+            if (!r[name]) r[name] = { name, point }
+            else r[name].point += point
+            return r
+        }, {})).sort((a, b) => b.point - a.point)
+
+        const result_verify = Object.values(verify_data.reduce((r, { name, point }) => {
+            if (!r[name]) r[name] = { name, point }
+            else r[name].point += point
+            return r
+        }, {}))
+
+        record_list = []
+        for (let i = 0; i < result_rank.length; i++) {
+            for (let a = 0; a < result_verify.length; a++) {
+                if (result_rank[i].name == result_verify[a].name) {
+                    verify_rank = result_verify[a].point
+                }
+            }
+            record_list.push(`<li onclick="getUserData(${i})" style="cursor:pointer">${result_rank[i].name} : ${roundNumber(result_rank[i].point + verify_rank, 3)} ➦</li>`)
         }
-        rank = `${rank} </ol>`;
-        rank_node.html(`${rank}`);
+
+        function getUserData(user) {
+            user_list = []
+            user_verify = []
+            hardestsearch = true
+            for (let i = 0; i < rank_data.length; i++) {
+                if (rank_data[i].name == result_rank[user].name) {
+                    user_list.push(`<li>${rank_data[i].level} ${rank_data[i].percent}% (#${rank_data[i].rank} / UP: ${roundNumber(rank_data[i].point, 3)})</li>`)
+                    if (hardestsearch && rank_data[i].percent == 100) {
+                        var hardest = rank_data[i]
+                        hardestsearch = false
+                    }
+                }
+            }
+
+            for (let i = 0; i < verify_data.length; i++) {
+                if (verify_data[i].name == result_rank[user].name) {
+                    user_verify.push(`<li>${verify_data[i].level} Verified (#${verify_data[i].rank} / UP: ${roundNumber(verify_data[i].point, 3)})</li>`)
+                }
+            }
+
+            for (let i = 0; i < result_verify.length; i++) {
+                if (result_rank[user].name == result_verify[i].name) {
+                    verify_rank = result_verify[i].point
+                }
+            }
+
+            Swal.fire({
+                title: `#${user + 1} : ${result_rank[user].name}`,
+                html: `<center>
+                    <strong>Score : ${roundNumber(result_rank[user].point + verify_rank, 3)}<br>Best Record : ${hardest.level}<br>Completed Levels : ${user_list.length} level${user_list.length > 1 ? 's' : ''}</strong><br>
+                    <br><strong>Record List : </strong>
+                    <ol>${user_verify.toString().replace(/,/g, '')}${user_list.toString().replace(/,/g, '')}</ol>
+                    </center>`,
+                background: 'rgb(40, 40, 40)',
+                color: '#fff',
+            })
+        }
+
+        $("#user-rank").html(`<ol>${record_list.toString().replace(/,/g, '')}</ol>`);
     </script>
     <script name="postload" type="text/javascript">
         var l = getParameterByName('q', window.location.href) * 1 - 1;
@@ -302,12 +340,12 @@
             var arank = 0;
             var brank = 0;
             if (a.key == null) {
-                arank = 150 + (legacy_count - a.legacyKey);
+                arank = 50 + (legacy_count - a.legacyKey);
             } else {
                 arank = (a.key) + 1;
             }
             if (b.key == null) {
-                brank = 150 + (legacy_count - b.legacyKey);
+                brank = 50 + (legacy_count - b.legacyKey);
             } else {
                 brank = (b.key) + 1;
             }
@@ -344,7 +382,7 @@
                 }
                 var rank = 0;
                 if (entry.key == null) {
-                    rank = 150 + (legacy_count - entry.legacyKey);
+                    rank = 50 + (legacy_count - entry.legacyKey);
                 } else {
                     rank = (entry.key) + 1;
                 }
@@ -356,7 +394,7 @@
                         hacked = " <span class='p-hacked'>POSSIBLY HACKED</span>";
                     }
                 }
-                $("#levelname").html((rank > 150 ? `` : `#` + rank + ` `) + entry.name + hacked);
+                $("#levelname").html((rank > 50 ? `` : `#` + rank + ` `) + entry.name + hacked);
                 var author = entry.author;
                 var final_author;
                 if (author.includes(' more ')) {
@@ -432,17 +470,7 @@
             '<i class="fas fa-head-side-mask"> </i>',
         ];
         $('span#icon').html(icons[Math.floor(Math.random() * (icons.length))])
-            twemoji.parse($('body')[0])
-    </script>
-    <script type="text/javascript">
-        $(window).on('load', function () {
-            Swal.fire({
-            title: '⚠ Warning ⚠',
-            html: 'This version of the website is a <strong>static version</strong>, and will only be used as a backup while the main site is down.',
-            confirmButtonText: 'Got it'
-        })
         twemoji.parse($('body')[0])
-    })
     </script>
     <noscript>
         <div id="block">
