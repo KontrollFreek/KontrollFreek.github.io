@@ -272,6 +272,8 @@
             for (let a = 0; a < result_verify.length; a++) {
                 if (result_rank[i].name == result_verify[a].name) {
                     verify_rank = result_verify[a].point
+                } else {
+                    verify_rank = 0
                 }
             }
             record_list.push(`<li onclick="getUserData(${i})" style="cursor:pointer">${result_rank[i].name} : ${roundNumber(result_rank[i].point + verify_rank, 3)} ➦</li>`)
@@ -300,6 +302,8 @@
             for (let i = 0; i < result_verify.length; i++) {
                 if (result_rank[user].name == result_verify[i].name) {
                     verify_rank = result_verify[i].point
+                } else {
+                    verify_rank = 0
                 }
             }
 
