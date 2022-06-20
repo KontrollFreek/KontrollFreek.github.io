@@ -1,491 +1,62 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title>The Penis List</title>
-    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.15.4/css/all.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <link href="css/stylesheet-main.css" type="text/css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="shortcut icon"
         href="https://vignette.wikia.nocookie.net/geometry-dash-fan/images/4/48/Hard_Demon.png/revision/latest?cb=20171009194744"
         type="image/x-icon">
-    <meta id="meta-title" property="og:title" content="The Penis List">
-    <meta id="meta-desc" property="og:description" content="Penis List">
-    <meta name="viewport" content="user-scalable=no">
-    <meta charset="UTF-8">
-    <script type='text/javascript' src="https://penislist.kontrollfreek.repl.co/list.js"></script>
+    <title>GD Penis List</title>
+
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="css/levels.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 </head>
 
 <body>
-    <script type='text/javascript' src="js/jquery-3.2.1.min.js">
-    </script>
-    <script type='text/javascript' src="js/sweetalert2.min.js">
-    </script>
-    <script type='text/javascript' src="js/twemoji.min.js">
-    </script>
-    <script type='text/javascript' src="js/userData.js">
-    </script>
-    <cover-all id="hi">
-        <header id="dl-header">
-            <div id="sitename"><strong>The Penis List </strong><span id="icon"></span>
-                <small><em id="version-node"></em></small>
-            </div>
-            <div id="pc-link"><a href="https://discord.gg/W7FPztAFbs"><em><strong>Official Discord <i
-                                class="fab fa-discord"></i></strong></a></em></div>
-        </header>
-        <div id="list">
-        </div>
-        <div id="info">
-            <div id="inner-info">
-                <center>
-                    <div id="levelname"></div>
-                    <div id="levelauthor">by <span id="inside-level-author"></span></div>
-                    <br>
-                    <div id="leveldescription"></div>
-                    <div id="levelvid"></div>
-                </center>
-                <div id="records">
-                    <center>
-                        <hr>
-                        <div id="level-info" style="font-size: 22px">
-                            <div id="records-score"></div>
-                            <div id="records-id"></div>
-                            <div id="records-pass"></div>
-                        </div>
-                        <hr>
-                        <div id="records-title"><strong>Records</strong></div><br>
-                        <div id="qualification"><strong id="levelqualify"></strong>% or better required to
-                            qualify<br><br>
-                            <center><a target="_blank" href="https://forms.gle/UFB1ChmLdWyqqBqK6">> Submit Record <</a>
-                            </center>
-                        </div>
-                        <br>
-                    </center>
-                    <hr>
-                    <div id="records-table">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="additional-information">
-            <div id="inner-right-info">
-                <div><strong>Do you have a record to submit? Was your record typed incorrectly or does it need updating?
-                        <u><a target="_blank" href="https://forms.gle/UFB1ChmLdWyqqBqK6">Submit
-                                your
-                                record!</a></u></strong></div>
-                <br>
-                <div>
-                    List Editors:
-                    <li>
-                        <a href="https://twitter.com/KontrollF"> <i class="fas fa-crown"></i> KontrollFreek</a>
-                    </li>
-                    <li>
-                        <a href="https://twitter.com/Entropyowo"> <i class="fas fa-crown"></i> Chloe</a>
-                    </li>
-                    <li>
-                        <a href="https://twitter.com/JamesFlorio5"> <i class="fas fa-crown"></i> RegainedORU</a>
-                    </li>
-                    <li>
-                        <a href="https://www.youtube.com/channel/UCDeyQBRtAt6Htq3mYHGSAtg"> <i class="fas fa-crown"></i>
-                            Alex Wave</a>
-                    </li>
-                </div>
-                <div>
-
-                    <br><br>
-                    You can submit a record if you meet the following requirements:
-                    <ul>
-                        <li>Achieved the record without using hacks (however, FPS bypass is allowed, up to 360fps)</li>
-                        <li>Achieved the record on the level that is listed on the site - please check the level ID
-                            before you submit a record</li>
-                        <li>Have either source audio or clicks/taps in the video. Edited audio only does not count</li>
-                        <li>The recording must have a previous attempt and entire death animation shown before the
-                            completion, unless the completion is on the first attempt. Everyplay records are exempt from
-                            this</li>
-                        <li>Do not use secret routes or bug routes</li>
-                        <li>Do not use easy modes, only a record of the unmodified level qualifies</li>
-                        <li>Once a level falls onto the Legacy List, we accept records for it for 24 hours after it
-                            falls off, then afterwards we never accept records for said level</li>
-                    </ul>
-                    <br>
-                    You can submit a Level if you meet the following requirements:
-                    <ul>
-                        <li>The level is verified (follow rules above to make sure it is allowed)</li>
-                        <li>The level is not longer than 30 seconds</li>
-                        <li>The level is by you or verified by you</li>
-                        <li>The level must be completable on all platforms</li>
-                        <li>Does not have excessive consistency clicks (no spam challenges 😠)
-                        </li>
-                        <li>We do not accept levels that will be placed in the legacy list</li>
-                    </ul>
-                    <br><br>
-
-                    <p>
-                        Changelog:
-                        <br>
-                    <ul>
-                        <li>Discord videos can now be used in the list</li>
-                    </ul>
-                </div>
-            </div>
-            <hr>
-            <div id="user-rank-info">
-                <style type='text/css'>
-                    A:link {
-                        color: white !important;
-                        text-decoration: none;
-                    }
-
-                    /* 아직 방문하지 않은경우 */
-                    A:visited {
-                        color: white !important;
-                        text-decoration: none;
-                    }
-
-                    /* 한번 이상 방문한 링크 처리 */
-                    A:active {
-                        color: white !important;
-                        text-decoration: none;
-                    }
-
-                    /* 마우스로 클릭하는 순간 */
-                    A:hover {
-                        color: rgba(255, 255, 255, 0.5) !important;
-                        text-decoration: none;
-                    }
-
-                    /* 마우스 링크 위 올려 놓았을때 */
-                </style>
-                <center><strong>User Score List</strong></center>
-                <div id="user-rank"></div>
-            </div>
-        </div>
-    </cover-all>
-    <script>
-        // height changing script
-        var hChange = function () {
-            var height = $(window).height();
-            let remainingHeight = (height - 100) + "px";
-            $("#list").css('height', remainingHeight)
-            $("#additional-information").css('height', remainingHeight)
-            $("#user-rank").css('height', remainingHeight)
-            $("#info").css('height', remainingHeight)
-        };
-        hChange();
-        $(window).resize(hChange)
-        // random color
-        var c = 0; //Math.floor(Math.random()*256);
-        function cueCSS() { }
-        cueCSS();
-        $('#hi').prop('style', 'background: hsl(' + c + ', 100%, 0%);')
-    </script>
-    <script name="userpoint" type="text/javascript">
-        function getPoint(rank) {
-            if (rank > 50) {
-                return roundNumber(15, 3);
-            } else {
-                return roundNumber((100 / Math.sqrt(((rank - 1) / 50) + 0.444444)) - 50, 3);
-            }
-        }
-        function roundNumber(num, scale) {
-            if (!("" + num).includes("e")) {
-                return +(Math.round(num + "e+" + scale) + "e-" + scale);
-            } else {
-                var arr = ("" + num).split("e");
-                var sig = ""
-                if (+arr[1] + scale > 0) {
-                    sig = "+";
-                }
-                return +(Math.round(+arr[0] + "e" + sig + (+arr[1] + scale)) + "e-" + scale);
-            }
-        }
-        function getUserPoint(rank, percent, cutline, hz) {
-            var hzpoint = 0.0;
-            if (hz == null) {
-                hzpoint = 0;
-            } else if (hz == "Mobile") {
-                hzpoint = 0;
-            } else {
-                var hzInt = parseInt(hz.replace("Bypass", "").replace("hz", "").replace("bypass", "").replace("Hz", "").replace("HZ", ""));
-                if (hzInt >= 110) {
-                    hzpoint = 0;
-                } else if (hzInt >= 70) {
-                    hzpoint = 0;
-                } else {
-                    hzpoint = 0;
-                }
-            }
-            var point_rank = 0;
-            if (rank > 50) {
-                point_rank = 50;
-            } else {
-                point_rank = rank;
-            }
-            hzpoint = 1 + (hzpoint * ((50 - point_rank) / 50));
-            if (rank > 50) {
-                return 15;
-            } else {
-                var score = roundNumber((((100 / Math.sqrt(((rank - 1) / 50) + 0.444444)) - 50) * hzpoint) * ((percent - (cutline - 1)) / (100 - (cutline - 1))), 3);
-                if (percent != 100) {
-                    return roundNumber(score - (score / 3), 3);
-                } else {
-                    return score;
-                }
-            }
-        }
-        function getAuthors(rank) {
-            Swal.fire({
-                html: list[rank - 1].more + '.'
-            });
-        }
-
-        var rank_data = [];
-        var verify_data = []
-        for (var i = 0; i < list.length; i++) {
-            for (var a = 0; a < list[i].vids.length; a++) {
-                if (!list[i].vids[a].user == '') {
-                    rank_data.push({ level: list[i].name, rank: i + 1, percent: list[i].vids[a].percent, name: list[i].vids[a].user, point: getPoint(i + 1) })
-                }
-            }
-            if (list[i].author.includes('[')) list[i].author = list[i].author.split('[')[1].replace(']', '');
-            verify_data.push({ level: list[i].name, rank: i + 1, point: getPoint(i + 1), name: list[i].author })
-        }
-
-        const result_rank = Object.values(rank_data.reduce((r, { name, point }) => {
-            if (!r[name]) r[name] = { name, point }
-            else r[name].point += point
-            return r
-        }, {})).sort((a, b) => b.point - a.point)
-
-        const result_verify = Object.values(verify_data.reduce((r, { name, point }) => {
-            if (!r[name]) r[name] = { name, point }
-            else r[name].point += point
-            return r
-        }, {}))
-
-        for (let i = 0; i < result_rank.length; i++) {
-            for (let a = 0; a < result_verify.length; a++) {
-                if (result_rank[i].name == result_verify[a].name) {
-                    result_rank[i].point += result_verify[a].point
-                    break
-                }
-            }
-        }
-
-        result_rank.sort((a, b) => b.point - a.point)
-
-        record_list = []
-        for (let i = 0; i < result_rank.length; i++) {
-            record_list.push(`<li onclick="getUserData(${i})" style="cursor:pointer">${result_rank[i].name} : ${roundNumber(result_rank[i].point, 3)} ➦</li>`)
-        }
-
-        function getUserData(user) {
-            user_list = []
-            user_verify = []
-            hardestsearch = true
-            for (let i = 0; i < rank_data.length; i++) {
-                if (rank_data[i].name == result_rank[user].name) {
-                    user_list.push(`<li>${rank_data[i].level} ${rank_data[i].percent}% (#${rank_data[i].rank} / UP: ${roundNumber(rank_data[i].point, 3)})</li>`)
-                    if (hardestsearch && rank_data[i].percent == 100) {
-                        var hardest = rank_data[i]
-                        hardestsearch = false
-                    }
-                }
-            }
-
-            for (let i = 0; i < verify_data.length; i++) {
-                if (verify_data[i].name == result_rank[user].name) {
-                    user_verify.push(`<li>${verify_data[i].level} Verified (#${verify_data[i].rank} / UP: ${roundNumber(verify_data[i].point, 3)})</li>`)
-                }
-            }
-
-            for (let i = 0; i < result_verify.length; i++) {
-                if (result_rank[user].name == result_verify[i].name) {
-                    verify_rank = result_verify[i].point
-                } else {
-                    verify_rank = 0
-                }
-            }
-
-            Swal.fire({
-                title: `#${user + 1} : ${result_rank[user].name}`,
-                html: `<center>
-                    <strong>Score : ${roundNumber(result_rank[user].point, 3)}<br>Best Record : ${hardest.level}<br>Completed Levels : ${user_list.length} level${user_list.length > 1 ? 's' : ''}</strong><br>
-                    <br><strong>Record List : </strong>
-                    <ol>${user_verify.toString().replace(/,/g, '')}${user_list.toString().replace(/,/g, '')}</ol>
-                    </center>`,
-                background: 'rgb(40, 40, 40)',
-                color: '#fff',
-            })
-        }
-
-        $("#user-rank").html(`<ol>${record_list.toString().replace(/,/g, '')}</ol>`);
-    </script>
-    <script name="postload" type="text/javascript">
-        var l = getParameterByName('q', window.location.href) * 1 - 1;
-        var list_node = $("#list");
-        var record_node = $("#records-table")
-        var legacy_count = 0;
-        for (var i = 0; i < list.length; i++) {
-            var entry = list[i];
-            if (entry.key == null) {
-                legacy_count++;
-            }
-        }
-        $("#version-node").text("(v " + version[0] + "." + version[1] + "." + version[2] + ")");
-        list.sort(function (a, b) {
-            var legacy_count = 0;
-            for (var i = 0; i < list.length; i++) {
-                var entry = list[i];
-                if (entry.key == null) {
-                    legacy_count++;
-                }
-            }
-            var arank = 0;
-            var brank = 0;
-            if (a.key == null) {
-                arank = 50 + (legacy_count - a.legacyKey);
-            } else {
-                arank = (a.key) + 1;
-            }
-            if (b.key == null) {
-                brank = 50 + (legacy_count - b.legacyKey);
-            } else {
-                brank = (b.key) + 1;
-            }
-            return arank - brank;
-        });
-        for (var i = 0; i < list.length; i++) {
-            var entry = list[i];
-            if (entry.key != null) {
-                $("<div>").addClass((l == -1 ? (i == 0) : (i == l)) ? 'entry selected' : 'entry').html(`#${i + 1}: <strong>${entry.name}</strong> by <em class="author">${entry.author}</em>`).attr('value', i).appendTo(list_node)
-            } else {
-                $("<div>").addClass((l == -1 ? (i == 0) : (i == l)) ? 'entry selected' : 'entry').html(`<strong>Legacy</strong>: <strong>${entry.name}</strong> by <em class="author">${entry.author}</em>`).attr('value', i).appendTo(list_node)
-            }
-        }
-        // handlers
-        var load = function (node) {
-            var num;
-            if (typeof node == 'number') {
-                num = node;
-            } else {
-                num = $(node).attr('value')
-            }
-            var entry = list[num];
-            if (!entry) {
-                load(0)
-            } else {
-                if (entry.verificationVid !== null && entry.verificationVid !== "") {
-                    if (entry.verificationVid.startsWith('https://youtu') || entry.verificationVid.startsWith('https://www.youtu')) {
-                        entry.verificationVid = entry.verificationVid
-                            .replace(/www\.youtube.com\/watch\?v=/gi, '')
-                            .replace(/\/youtu\.be/gi, '')
-                            .replace(/&t=\d+s/gi, '')
-                            .replace(/https:\/\//gi, '')
-                    }
-                }
-                var rank = 0;
-                if (entry.key == null) {
-                    rank = 50 + (legacy_count - entry.legacyKey);
-                } else {
-                    rank = (entry.key) + 1;
-                }
-                var hacked = "";
-                if (entry.hacked != null) {
-                    if (entry.hacked) {
-                        hacked = " <span class='hacked'>HACKED</span>";
-                    } else {
-                        hacked = " <span class='p-hacked'>POSSIBLY HACKED</span>";
-                    }
-                }
-                $("#levelname").html((rank > 50 ? `` : `#` + rank + ` `) + entry.name + hacked);
-                var author = entry.author;
-                var final_author;
-                if (author.includes(' more ')) {
-                    final_author = author.replace(' more ', ' <u><span onclick="getAuthors(' + rank + ')" style="cursor:pointer">more</u> ');
-                } else {
-                    final_author = author
-                }
-                final_author = final_author.replace(' [', ', Verified by ').replace(']', "")
-                $("#inside-level-author").empty();
-                $("#inside-level-author").html(final_author);
-                $("#leveldescription").empty();
-                $("#leveldescription").text(entry.desc);
-                $("#levelvid").empty();
-                if (entry.verificationVid !== null && entry.verificationVid !== "") {
-                    if (entry.verificationVid.startsWith('https://media.discordapp') || entry.verificationVid.startsWith('https://cdn.discordapp')) { $("#levelvid").html(`<hr><video class="vid" src="${entry.verificationVid}" height="300" controls poster="/video/wind-8a1cd93f.png"></video>`) }
-                    else { $("#levelvid").html(`<hr><iframe class="vid" height="300" src="https://www.youtube.com/embed/${entry.verificationVid}?rel=0" frameborder="0" allowfullscreen></iframe>`) }
-                }
-                $("#levelqualify").text(entry.percentToQualify);
-                $("#records-score").html(`<strong>Points when completed : ${getPoint(rank)}</strong>`);
-                $("#records-id").html(`<strong>Level ID : ${entry.id}</strong>`);
-                $("#records-pass").html(`<strong>Level Password : ${entry.pass}</strong>`);
-                $("#inside-level-author").html(final_author);
-                $(record_node).empty();
-                entry.vids.sort(function (a, b) {
-                    return b.percent - a.percent;
-                });
-                for (var j = 0; j < entry.vids.length; j++) {
-                    var record = entry.vids[j];
-                    if (!record.link.includes('https://')) {
-                        record.link = "https://" + record.link;
-                    }
-                    if (record.hz == null) {
-                        record.hz = "144hz";
-                    }
-                    $("<div>").addClass('record-entry').html(`<div class='interentry'><a href="${record.link}" target="_blank"><strong>${record.user}</strong> (<em>${record.percent}%</em>) ${record.hz}</div>`).appendTo(record_node)
-                }
-            }
-            cueCSS();
-        };
-        $('.entry').click(function () {
-            $('.entry').removeClass('selected')
-            $(this).addClass('selected');
-            load(this);
-        })
-        // https://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
-        function getParameterByName(name, url) {
-            if (!url) url = window.location.href;
-            name = name.replace(/[\[\]]/g, "\\$&");
-            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-                results = regex.exec(url);
-            if (!results) return null;
-            if (!results[2]) return '';
-            return decodeURIComponent(results[2].replace(/\+/g, " "));
-        }
-        load(l * 1)
-    </script>
-    <script type='text/javascript'>
-        const icons = [
-            '<i class="far fa-lemon"> </i>',
-            '<i class="far fa-angry"> </i>',
-            '<i class="fas fa-wheelchair"> </i>',
-            '<i class="fas fa-hands-wash"> </i>',
-            '<i class="far fa-sad-tear"> </i>',
-            '<i class="far fa-trash-alt"> </i>',
-            '<i class="fas fa-dumpster-fire"> </i>',
-            '<i class="fas fa-bacon"> </i>',
-            '<i class="fas fa-hand-middle-finger"> </i>',
-            '<i class="far fa-smile"> </i>',
-            '<i class="fas fa-wifi"> </i>',
-            '<i class="fab fa-angellist"> </i>',
-            '<i class="fas fa-asterisk"> </i>',
-            '<i class="far fa-compass"> </i>',
-            '<i class="fas fa-head-side-mask"> </i>',
-        ];
-        $('span#icon').html(icons[Math.floor(Math.random() * (icons.length))])
-        twemoji.parse($('body')[0])
-    </script>
-    <noscript>
-        <div id="block">
-            You are not using JavaScript
-        </div>
-    </noscript>
-
+    <div class="load"><img src="../src/icon.svg"></div>
+    <div class="topnav">
+        <span class="info">
+            <a href="../">
+                <img class="icon"
+                    src="https://vignette.wikia.nocookie.net/geometry-dash-fan/images/4/48/Hard_Demon.png/revision/latest?cb=20171009194744">
+                <span class="title">GD Penis List</span>
+            </a>
+            <span class="version muted"></span>
+        </span>
+        <span class="buttons">
+            <a href="https://discord.gg/W7FPztAFbs" target="_blank"><button>Discord</button></a>
+            <a href="../records"><button>Records</button></a>
+            <a href="https://forms.gle/UFB1ChmLdWyqqBqK6" target="_blank"><button>Submit</button></a>
+            <a href="../guidelines"><button>Guidelines</button></a>
+        </span>
+        <span class="overflow">
+            <button><i class="bi bi-three-dots"></i></button>
+        </span>
+    </div>
+    <div class="overflowbuttons">
+        <a href="https://discord.gg/W7FPztAFbs" target="_blank">Discord</a>
+        <a href="../records">Records</a>
+        <a href="https://forms.gle/UFB1ChmLdWyqqBqK6" target="_blank">Submit</a>
+        <a href="../guidelines">Guidelines</a>
+    </div>
+    <div class="levels"></div>
 </body>
+
+<script src="https://penislist.kontrollfreek.repl.co/list.js"></script>
+
+<script src="../js/libraries/jquery.min.js"></script>
+
+<script src="../js/libraries/jquery.cookie.min.js"></script>
+<script src="../js/libraries/jquery.parallax.min.js"></script>
+<script src="../js/libraries/twemoji.min.js"></script>
+<script src="../js/libraries/sweetalert2.min.js"></script>
+
+<script src="../js/main.js"></script>
+<script src="../js/screen.js"></script>
+<script src="../js/populate.js"></script>
 
 </html>
