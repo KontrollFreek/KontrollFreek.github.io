@@ -181,49 +181,49 @@ const packs = {
             'name': 'DarkMode',
             'author': 'Homie Seal',
             'link': 'https://github.com/KontrollFreek/KontrollFreek.github.io/releases/download/GDShare/GDShare_DarkMode_v0.33_y.zip',
-            'version': '0.33 y',
+            'version': '0.3.4',
         },
         {
             'name': 'Diamond Pack v2',
             'author': 'multi',
             'link': 'https://github.com/KontrollFreek/KontrollFreek.github.io/releases/download/GDShare/GDShare_Diamond_Pack_v2_v0.33_y.zip',
-            'version': '0.33 y',
+            'version': '0.3.4',
         },
         {
             'name': 'Omni',
             'author': 'KontrollFreek',
             'link': 'https://github.com/KontrollFreek/KontrollFreek.github.io/releases/download/GDShare/GDShare_Omni_v0.33_y.zip',
-            'version': '0.33 y',
+            'version': '0.3.4',
         },
         {
             'name': 'Spectra',
             'author': 'KontrollFreek',
             'link': 'https://github.com/KontrollFreek/KontrollFreek.github.io/releases/download/GDShare/GDShare_Spectra_Menu_v0.33_y.zip',
-            'version': '0.33 y',
+            'version': '0.3.4',
         },
         {
             'name': 'SSOH v3.2',
             'author': 'sequoia',
             'link': 'https://github.com/KontrollFreek/KontrollFreek.github.io/releases/download/GDShare/GDShare_SSOH_v3.2_Pack_v0.33_y.zip',
-            'version': '0.33 y',
+            'version': '0.3.4',
         },
         {
             'name': '(Teno) Cherry Blossom',
             'author': 'KontrollFreek',
             'link': 'https://github.com/KontrollFreek/KontrollFreek.github.io/releases/download/GDShare/GDShare_Teno_Cherry_Blossom_v0.33_y.zip',
-            'version': '0.33 y',
+            'version': '0.3.4',
         },
         {
             'name': 'Tetrys TP',
             'author': 'multi',
             'link': 'https://github.com/KontrollFreek/KontrollFreek.github.io/releases/download/GDShare/GDShare_Tetrys_TP_v0.33_y.zip',
-            'version': '0.33 y',
+            'version': '0.3.4',
         },
         {
             'name': 'Futura UI',
             'author': 'multi',
             'link': 'https://github.com/KontrollFreek/KontrollFreek.github.io/releases/download/GDShare/GDShare_Futura_UI_v0.33_y.zip',
-            'version': '0.33 y',
+            'version': '0.3.4',
         }
     ],
 
@@ -237,7 +237,7 @@ const packs = {
 
     'versions': {
         'betteredit': '4.0.5',
-        'gdshare': '0.33 y',
+        'gdshare': '0.3.4',
     }
     
 }
