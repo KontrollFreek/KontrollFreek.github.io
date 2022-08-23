@@ -29,3 +29,9 @@ Added a custom 404 Page.
 Updated a bit of outdated info, fixed a small overlook, and made the 404 page universal.
 I'll finish the site soon I promise, just give me a while.
 
+## v2.0
+
+**Update**
+
+New redesign with better functionality.
+
